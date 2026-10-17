@@ -1,41 +1,21 @@
-# KARMIX TECHNOLOGY website
+# KARMIX TECHNOLOGIES Website
 
-A simple, responsive, single-page company website built with plain HTML, CSS and JavaScript. No paid theme, framework or build step is required.
+Responsive static website for GitHub Pages. Built to match the approved KARMIX website reference with a white/orange/navy industrial automation style and the supplied KARMIX logo.
 
 ## Files
-- `index.html` — website content and page structure
-- `styles.css` — responsive design and colors
-- `script.js` — mobile navigation and current year
-- `assets/karmix-logo.png` — supplied company logo
-- `assets/automation-banner.png` — generated industrial automation banner
+- `index.html` — website structure and content
+- `assets/style.css` — responsive styling
+- `assets/script.js` — mobile menu and email enquiry form
+- `assets/` — logo and locally stored visual assets
 
-## Preview on your computer
-Open `index.html` in Chrome. For the most reliable preview, use VS Code with the free Live Server extension.
+## Publish on GitHub Pages
+1. Extract this ZIP.
+2. Upload `index.html`, `README.md`, and the entire `assets` folder to the root of your existing repository.
+3. Commit changes to your publishing branch.
+4. In GitHub, open **Settings → Pages**. Select **Deploy from a branch**, choose your publishing branch (usually `main`) and `/(root)`, then save.
 
-## Publish free with GitHub Pages
-1. Sign in to GitHub and create a **public** repository, for example `karmix-technology-website`.
-2. Upload all files and folders in this project. Keep `index.html` in the repository's root and keep the `assets` folder unchanged.
-3. Open the repository's **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Select branch **main** and folder **/(root)**, then click **Save**.
-6. Wait a minute or two. GitHub will show a public website address in the Pages section, usually `https://YOUR-USERNAME.github.io/karmix-technology-website/`.
+The enquiry form opens the visitor's email app with the message prepared for `karmixtechnology@gmail.com`. It does not send automatically; automatic form processing requires a form backend.
 
-The website and hosting can be free with GitHub Pages. A custom `.com` domain usually costs money, but it is optional.
+The website intentionally does not advertise LabVIEW, Python, C++, or .NET services. Update the phone number in `index.html` before publishing if `+91 98765 43210` is not your current business number.
 
-## Change company details
-- Email and phone: search in `index.html` for `karmixtechnology@gmail.com` and `86686 57463`.
-- Projects and descriptions: edit the project cards in `index.html`.
-- Logo: replace `assets/karmix-logo.png` with your updated logo, keeping the same filename.
-- Banner: replace `assets/automation-banner.png` with your preferred banner, keeping the same filename.
-- Colors: edit the CSS variables at the top of `styles.css`. Main orange is `#f47700`, text is `#191a1c`, and background is `#ffffff`.
-
-## Project areas included
-- Traceability Application (SQL/API, single- and multi-station)
-- FCT & EOL Testing
-- IC Flashing (ST-LINK, Renesas and Cyclone tools, depending on device compatibility)
-- Assembly Line Station
-- ECU Testing using CAN and LIN
-- Additional project areas such as battery charger, PCB FCT, LVDT flatness measurement, scanning/printing, IC programming and automatic indexers
-
-## Before publishing
-Check every project description and contact detail. The website describes your project capabilities and does not claim certifications, customer names or performance figures that have not been provided.
+Layout update: the area below the footer now uses the same dark navy background, preventing a distracting white gap on Android Chrome when Desktop site is enabled.

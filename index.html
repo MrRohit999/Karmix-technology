@@ -1,104 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f47700">
-  <meta name="description" content="KARMIX TECHNOLOGY delivers software solutions, industrial automation, test systems, traceability and machine integration.">
-  <title>KARMIX TECHNOLOGY | Software Solutions & Industrial Automation</title>
-  <link rel="icon" type="image/png" href="assets/karmix-logo.png">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KARMIX Technologies delivers software solutions, industrial automation, ECU testing, traceability, PLC and HMI solutions, and customized testing systems.">
+  <title>KARMIX Technologies | Software Solutions & Automation</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/script.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="KARMIX TECHNOLOGY home">
-      <img src="assets/karmix-logo.png" alt="KARMIX TECHNOLOGY logo">
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <nav class="nav" id="nav">
-      <a href="#solutions">Solutions</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a class="nav-contact" href="#contact">Contact us <span>↗</span></a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-art" role="img" aria-label="Industrial automation and robotics production line"></div>
-      <div class="hero-content">
-        <p class="eyebrow"><span class="eyebrow-line"></span> SOFTWARE SOLUTIONS · INDUSTRIAL AUTOMATION · TEST SYSTEMS</p>
-        <h1>Engineering smarter.<br><span>Automating better.</span></h1>
-        <p class="hero-copy">Practical automation software and test solutions that help machines work smarter, processes run reliably, and production data stay connected.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore our work <span>↘</span></a>
-          <a class="button button-quiet" href="#contact">Discuss a project <span>↗</span></a>
-        </div>
-        <div class="hero-proof">
-          <div><strong>Software Solutions</strong><span>Application development</span></div>
-          <div><strong>Test &amp; Trace</strong><span>Connected production</span></div>
-          <div><strong>Machine-ready</strong><span>Automation solutions</span></div>
-        </div>
-      </div>
-      <div class="hero-stamp"><span class="stamp-dot"></span> BUILT FOR INDUSTRY</div>
-    </section>
-
-    <section class="trust-strip" aria-label="Capabilities">
-      <span>SOFTWARE</span><i></i><span>HARDWARE INTEGRATION</span><i></i><span>TEST AUTOMATION</span><i></i><span>TRACEABILITY</span>
-    </section>
-
-    <section class="section" id="solutions">
-      <div class="section-heading">
-        <div><p class="eyebrow">WHAT WE DO</p><h2>Automation that fits<br>your production floor.</h2></div>
-        <p class="section-intro">From a single test station to a connected production line, we build clear, dependable systems around your process.</p>
-      </div>
-      <div class="solution-grid">
-        <article class="solution-card"><div class="solution-icon icon-lab">SW</div><h3>Software Solutions</h3><p>Operator-friendly applications, machine interfaces, data acquisition, reporting and control logic.</p><a href="#contact">Build an application <span>↗</span></a></article>
-        <article class="solution-card"><div class="solution-icon icon-test">✓</div><h3>Test &amp; Validation</h3><p>Functional testing, ECU testing, end-of-line checks and reliable pass/fail reporting.</p><a href="#contact">Plan a test system <span>↗</span></a></article>
-        <article class="solution-card"><div class="solution-icon icon-data">⌘</div><h3>Traceability &amp; Data</h3><p>SQL and API-connected applications for station-level or multi-station production traceability.</p><a href="#contact">Connect your data <span>↗</span></a></article>
-        <article class="solution-card"><div class="solution-icon icon-machine">⚙</div><h3>Machine Integration</h3><p>Hardware communication, sensors, measurement systems and automation equipment integration.</p><a href="#contact">Integrate a machine <span>↗</span></a></article>
-      </div>
-    </section>
-
-    <section class="projects-section" id="projects">
-      <div class="section">
-        <div class="section-heading">
-          <div><p class="eyebrow">SELECTED CAPABILITIES</p><h2>Projects built around<br>real-world needs.</h2></div>
-          <p class="section-intro">A snapshot of the project areas KARMIX TECHNOLOGY can support. Scope and hardware are finalized to suit each customer application.</p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card"><div class="project-visual visual-battery"><span class="visual-label">POWER TEST</span><div class="battery-shape"><b>3.3</b><small>kW</small><span></span></div><div class="visual-lines"></div></div><div class="project-info"><span class="project-type">POWER ELECTRONICS</span><h3>3.3 kW Battery Charger</h3><p>Charging application monitoring, control and test automation.</p></div></article>
-          <article class="project-card"><div class="project-visual visual-ecu"><span class="visual-label">ECU VALIDATION</span><div class="ecu-chip"><b>ECU</b><span>CAN · LIN</span></div><div class="chip-traces"></div></div><div class="project-info"><span class="project-type">AUTOMOTIVE TEST</span><h3>ECU Testing using CAN &amp; LIN</h3><p>Automated ECU validation and communication testing over CAN and LIN using compatible interfaces, including Peak-System hardware where applicable.</p></div></article>
-          <article class="project-card"><div class="project-visual visual-pcb"><span class="visual-label">FUNCTIONAL TEST</span><div class="pcb-board"><i></i><i></i><i></i><i></i><b>PCB</b></div></div><div class="project-info"><span class="project-type">ELECTRONICS</span><h3>PCB FCT</h3><p>Functional test workflows with operator prompts and clear test results.</p></div></article>
-          <article class="project-card"><div class="project-visual visual-test"><span class="visual-label">FUNCTIONAL &amp; END-OF-LINE</span><div class="test-panel"><b>FCT</b><span></span><b>EOL</b></div><div class="test-status"><i></i> PASS</div></div><div class="project-info"><span class="project-type">AUTOMATED TESTING</span><h3>FCT &amp; EOL Testing</h3><p>Functional circuit testing and end-of-line test sequences with clear pass/fail results and data logging.</p></div></article>
-          <article class="project-card"><div class="project-visual visual-trace"><span class="visual-label">CONNECTED FACTORY</span><div class="trace-window"><b>TRACEABILITY</b><span class="trace-row"></span><span class="trace-row"></span><span class="trace-row"></span><span class="trace-row"></span></div></div><div class="project-info"><span class="project-type">PRODUCTION DATA</span><h3>Traceability Application</h3><p>SQL- and API-based production records, serial-number tracking and results history for single-station or multi-station environments.</p></div></article>
-          <article class="project-card"><div class="project-visual visual-measure"><span class="visual-label">PRECISION MEASUREMENT</span><div class="gauge"><div class="gauge-needle"></div><b>LVDT</b></div><div class="measure-platform"></div></div><div class="project-info"><span class="project-type">MEASUREMENT</span><h3>Flatness Testing using LVDT</h3><p>Measurement acquisition and result display for dimensional inspection.</p></div></article>
-          <article class="project-card"><div class="project-visual visual-line"><span class="visual-label">PRODUCTION AUTOMATION</span><div class="conveyor"><i></i><i></i><i></i><i></i><i></i></div><div class="robot-arm"><b></b><i></i><span></span></div></div><div class="project-info"><span class="project-type">MACHINE AUTOMATION</span><h3>Assembly Line Station</h3><p>Station-level automation, operator guidance, process checks and production data integration for assembly lines.</p></div></article>
-          <article class="project-card"><div class="project-visual visual-flash"><span class="visual-label">DEVICE PROGRAMMING</span><div class="programmer"><b>IC</b><span>PROGRAMMING</span><i></i><i></i><i></i></div></div><div class="project-info"><span class="project-type">EMBEDDED SYSTEMS</span><h3>IC Flashing</h3><p>Flashing station integration for supported hardware such as ST-LINK, Renesas tools and PEmicro Cyclone programmers, depending on device and workflow.</p></div></article>
-          <article class="project-card"><div class="project-visual visual-scan"><span class="visual-label">IDENTIFICATION</span><div class="barcode"></div><div class="scan-card">SCAN <b>→</b> PRINT</div></div><div class="project-info"><span class="project-type">SHOP-FLOOR APPLICATIONS</span><h3>Scanning &amp; Printing</h3><p>Barcode workflows for identification, labels and production records.</p></div></article>
-        </div>
-        <p class="project-note">Also supporting IoT applications, Melexis IC programming, automatic indexer machines, and custom test systems.</p>
-      </div>
-    </section>
-
-    <section class="about-section section" id="about">
-      <div class="about-mark"><div class="mark-ring">K<span>+</span></div><p>KARMA INSPIRES EXCELLENCE</p></div>
-      <div class="about-copy"><p class="eyebrow">ABOUT KARMIX</p><h2>Engineering clarity<br>into every cycle.</h2><p>KARMIX TECHNOLOGY focuses on practical industrial software and automation solutions. We bring application logic, machine interfaces, test equipment and production data together in a way that is understandable for operators and useful for engineers.</p><div class="about-points"><span><b>01</b> Operator-first interfaces</span><span><b>02</b> Reliable data flow</span><span><b>03</b> Flexible integration</span></div></div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div class="contact-panel">
-        <div><p class="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let's make your<br>next process smarter.</h2><p>Tell us about your machine, test station or automation challenge.</p></div>
-        <div class="contact-details">
-          <a href="mailto:karmixtechnology@gmail.com"><span class="contact-symbol">✉</span><span><small>EMAIL</small><b>karmixtechnology@gmail.com</b></span><em>↗</em></a>
-          <a href="tel:+918668657463"><span class="contact-symbol">☎</span><span><small>PHONE</small><b>+91 86686 57463</b></span><em>↗</em></a>
-          <a href="https://github.com/" target="_blank" rel="noopener"><span class="contact-symbol">⌘</span><span><small>DEVELOPMENT</small><b>GitHub</b></span><em>↗</em></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer"><a href="#home" class="footer-brand">KARMIX <span>TECHNOLOGY</span></a><p>© <span id="year"></span> KARMIX TECHNOLOGY. Karma inspires excellence.</p><a href="#home">Back to top ↑</a></footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="#home" aria-label="KARMIX Technologies home"><img src="assets/karmix-logo.jpg" alt="KARMIX Technologies — Karma Inspires Excellence"></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#technology">Technology</a><a href="#contact">Contact</a></nav>
+    <a class="nav-cta" href="#contact"><span>✉</span> Get In Touch</a>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-bg"></div><div class="hero-shade"></div>
+    <div class="container hero-content">
+      <div class="eyebrow">SOFTWARE SOLUTIONS <i></i> AUTOMATION <i></i> TESTING <i></i> INDUSTRIAL IoT</div>
+      <h1>Turning Ideas into<br><em>Smart Automation</em> Solutions</h1>
+      <p>KARMIX TECHNOLOGIES delivers innovative software solutions<br class="desktop-only"> and automation systems to help industries achieve higher<br class="desktop-only"> efficiency, accuracy and traceability.</p>
+      <div class="hero-actions"><a class="btn btn-orange" href="#projects">Explore Our Projects <b>→</b></a><a class="watch-link" href="#about"><span class="play">▶</span><span>Watch Introduction<small>(2 min)</small></span></a></div>
+      <div class="hero-float"><div><span class="check">✓</span> Traceability</div><div><span class="round-icon">⚙</span> Testing</div><div><span class="round-icon">⚙</span> Automation</div><div><span class="round-icon">⌁</span> IoT / BLE</div></div>
+    </div>
+  </section>
+  <section class="services section" id="services"><div class="container"><div class="section-kicker">OUR SERVICES</div><h2>End-to-End Software &amp; Automation Solutions</h2><p class="section-intro">From concept to deployment, we build reliable, scalable and customized solutions<br class="desktop-only"> for your automation and testing needs.</p>
+    <div class="service-grid">
+      <article class="service-card"><span class="service-icon qr">▦</span><h3>Traceability Application</h3><p>Track, trace and manage your product data with ease.</p></article>
+      <article class="service-card"><span class="service-icon">♧</span><h3>ECU Testing</h3><p>CAN / LIN based testing with PEAK-System hardware.</p></article>
+      <article class="service-card"><span class="service-icon">▤</span><h3>FCT &amp; EOL</h3><p>Functional and End-of-Line test solutions.</p></article>
+      <article class="service-card"><span class="service-icon">▣</span><h3>PLC &amp; HMI Solution</h3><p>Industrial automation with intelligent HMI design.</p></article>
+      <article class="service-card"><span class="service-icon">&lt;/&gt;</span><h3>Customized Automation Software</h3><p>Tailored solutions for your unique requirements.</p></article>
+      <article class="service-card"><span class="service-icon">▱</span><h3>All Types of Software</h3><p>Desktop, utility, database, web and more.</p></article>
+      <article class="service-card"><span class="service-icon">☁</span><h3>APIs &amp; Integration</h3><p>Seamless integration with third-party systems.</p></article>
+      <article class="service-card"><span class="service-icon">▤</span><h3>Printing &amp; Scanning</h3><p>Barcode, QR and label applications.</p></article>
+      <article class="service-card"><span class="service-icon">⌁</span><h3>IoT &amp; BLE Devices</h3><p>Smart connectivity for modern automation.</p></article>
+      <article class="service-card"><span class="service-icon">⚙</span><h3>Assembly Line &amp; Indexer</h3><p>High precision and reliable machine solutions.</p></article>
+    </div>
+  </div></section>
+  <section class="projects-contact" id="projects"><div class="container split-layout"><div class="projects-panel"><div class="section-kicker">OUR WORK</div><div class="projects-heading"><div><h2>Our Featured Projects</h2><p>We have successfully delivered multiple automation and software<br class="desktop-only"> solutions for various industries. Here are some of our key projects.</p></div><a class="btn btn-outline" href="#contact">View All Projects <b>→</b></a></div>
+    <div class="project-grid">
+      <article class="project-card"><img src="assets/project-pcb.jpg" alt="PCB functional test setup"><div><h3>PCB FCT &amp; EOL</h3><p>Functional &amp; End of Line Testing</p><a href="#contact" aria-label="Enquire about PCB FCT and EOL">➜</a></div></article>
+      <article class="project-card"><img src="assets/project-flashing.jpg" alt="IC flashing programmer"><div><h3>IC Flashing &amp; Programming</h3><p>ST LINK / Renesas / Cyclone</p><a href="#contact" aria-label="Enquire about IC flashing">➜</a></div></article>
+      <article class="project-card"><img src="assets/project-traceability.jpg" alt="Traceability software dashboard"><div><h3>Traceability Application</h3><p>SQL + API Based</p><a href="#contact" aria-label="Enquire about traceability">➜</a></div></article>
+      <article class="project-card"><img src="assets/project-ecu.jpg" alt="ECU test station"><div><h3>ECU Testing</h3><p>CAN / LIN (PEAK-System)</p><a href="#contact" aria-label="Enquire about ECU testing">➜</a></div></article>
+      <article class="project-card"><img src="assets/project-assembly.jpg" alt="Industrial assembly line"><div><h3>Assembly Line Station</h3><p>Automation &amp; Indexer Machines</p><a href="#contact" aria-label="Enquire about assembly line">➜</a></div></article>
+      <article class="project-card"><img src="assets/project-ble.jpg" alt="BLE electronic device"><div><h3>BLE Device Solution</h3><p>Wireless Communication</p><a href="#contact" aria-label="Enquire about BLE solutions">➜</a></div></article>
+    </div>
+  </div>
+  <aside class="contact-panel" id="contact"><div class="section-kicker">LET'S CONNECT</div><h2>Get a Free Enquiry</h2><p>Tell us about your project or requirement.<br>We'll get back to you as soon as possible.</p>
+    <form id="enquiry-form"><label class="sr-only" for="name">Your Name</label><input id="name" name="name" placeholder="♙   Your Name *" required><label class="sr-only" for="email">Email Address</label><input id="email" name="email" type="email" placeholder="✉   Email Address *" required><label class="sr-only" for="phone">Phone Number</label><input id="phone" name="phone" type="tel" placeholder="♧   Phone Number *" required><label class="sr-only" for="service">Select Service</label><select id="service" name="service" required><option value="">◇   Select Service</option><option>Traceability Application</option><option>ECU Testing</option><option>FCT &amp; EOL</option><option>PLC &amp; HMI Solution</option><option>Customized Automation Software</option><option>APIs &amp; Integration</option><option>Printing &amp; Scanning</option><option>IoT &amp; BLE Devices</option><option>Assembly Line &amp; Indexer</option><option>Other</option></select><label class="sr-only" for="message">Your Message</label><textarea id="message" name="message" placeholder="▧   Your Message *" required></textarea><button class="btn btn-orange submit-btn" type="submit">➤ &nbsp; Send Enquiry</button><p class="form-note" id="form-note">Your email app will open with the enquiry prepared.</p></form>
+    <div class="contact-details"><a href="mailto:karmixtechnology@gmail.com">✉ &nbsp; karmixtechnology@gmail.com</a><span>♦ &nbsp; Pune, Maharashtra, India</span></div>
+  </aside></div></section>
+  <section class="about section" id="about"><div class="container about-layout"><img class="about-image" src="assets/automation-about.jpg" alt="Automation software interface on a laptop"><div class="about-copy"><div class="section-kicker">ABOUT KARMIX TECHNOLOGIES</div><h2>Your Partner in Automation &amp; Software Solutions</h2><p>KARMIX TECHNOLOGIES is a growing automation and software solutions company focused on delivering high-quality, reliable and cost-effective solutions. We work closely with our clients to understand their needs and turn them into efficient, practical solutions.</p><div class="value-grid"><div><b>◇</b><span>Quality<br>Focus</span></div><div><b>◷</b><span>On-Time<br>Delivery</span></div><div><b>♧</b><span>Customer<br>Satisfaction</span></div><div><b>☼</b><span>Continuous<br>Innovation</span></div></div></div></div></section>
+  <section class="technology" id="technology"><div class="container"><div class="section-kicker">TECHNOLOGIES &amp; TOOLS</div><div class="tech-list"><div><b class="tech-sql">▰</b><span>SQL Server</span></div><div><b class="tech-db">▧</b><span>SQL / Database</span></div><div><b class="tech-peak">PEAK</b><span>PEAK-System</span></div><div><b class="tech-rs">RS</b><span>RSLogix</span></div><div><b class="tech-hmi">HMI</b><span>PLC / HMI</span></div><div><b class="tech-ble">ᛒ</b><span>BLE</span></div></div></div></section>
+</main>
+<footer class="footer"><div class="container footer-main"><div class="footer-brand"><img src="assets/karmix-logo.jpg" alt="KARMIX Technologies logo"></div><div class="footer-contact"><a href="tel:+919876543210">♧ &nbsp; +91 98765 43210 <small>(Call / WhatsApp)</small></a><a href="mailto:karmixtechnology@gmail.com">✉ &nbsp; karmixtechnology@gmail.com</a><span>♦ &nbsp; Pune, Maharashtra, India</span></div><div class="footer-links"><b>Quick Links</b><div><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a></div></div><div class="footer-links"><b>Explore</b><div><a href="#technology">Technology</a><a href="#contact">Contact</a><a href="#contact">Privacy Policy</a><a href="#contact">Terms &amp; Conditions</a></div></div><div class="social"><b>Follow Us</b><div><a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a><a href="https://www.youtube.com/" aria-label="YouTube">▶</a><a href="https://github.com/" aria-label="GitHub">⌘</a></div><p>Build Smarter &nbsp;|&nbsp; Automate Better</p></div></div><div class="copyright">© 2026 KARMIX TECHNOLOGIES. All Rights Reserved.</div></footer>
+</body></html>
