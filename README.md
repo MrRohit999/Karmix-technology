@@ -16,6 +16,6 @@ Responsive static website for GitHub Pages. Built to match the approved KARMIX w
 
 The enquiry form opens the visitor's email app with the message prepared for `karmixtechnology@gmail.com`. It does not send automatically; automatic form processing requires a form backend.
 
-The website intentionally does not advertise LabVIEW, Python, C++, or .NET services. Update the phone number in `index.html` before publishing if `+91 98765 43210` is not your current business number.
+The website intentionally does not advertise LabVIEW, Python, C++, or .NET services. Update the phone number in `index.html` before publishing if `+91 86686 57463` is not your current business number.
 
 Layout update: the area below the footer now uses the same dark navy background, preventing a distracting white gap on Android Chrome when Desktop site is enabled.
