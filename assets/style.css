@@ -4,3 +4,28 @@
 @media(max-width:1000px){.container,.nav-wrap{width:calc(100% - 40px)}.brand{width:220px}.main-nav{gap:17px}.nav-wrap{gap:16px}.nav-cta{padding:10px 12px}.hero-float{left:59%}.service-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}.service-card{padding:10px;min-height:126px}.split-layout{grid-template-columns:minmax(0,1.8fr) minmax(260px,1fr)}.projects-panel{padding-right:17px}.contact-panel{padding-left:17px}.project-grid{gap:8px}.project-card img{height:75px}.footer-main{gap:12px;grid-template-columns:1.1fr 1.3fr .7fr .8fr .8fr}}
 @media(max-width:760px){.site-header{height:68px}.nav-wrap{height:64px;width:calc(100% - 30px)}.brand{width:210px}.brand img{height:55px}.menu-toggle{display:block;margin-left:auto}.nav-cta{display:none}.main-nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;padding:10px 20px 18px;box-shadow:0 10px 20px #061a2b1c;align-items:stretch;gap:0;flex-direction:column}.main-nav.open{display:flex}.main-nav a{padding:11px 8px;border-bottom:1px solid #edf0f3}.main-nav a.active:after{bottom:0;right:auto;width:30px}.container{width:calc(100% - 32px)}.hero{height:auto;min-height:360px}.hero-bg{background-position:60% center}.hero-shade{background:linear-gradient(90deg,rgba(3,15,25,.96),rgba(3,15,25,.79) 65%,rgba(3,15,25,.35))}.hero-content{padding-top:38px;padding-bottom:28px}.eyebrow{font-size:9px;gap:6px;flex-wrap:wrap;max-width:95%}.hero h1{font-size:31px;max-width:440px}.hero p{font-size:12px;max-width:420px}.desktop-only{display:none}.hero-float{position:relative;left:auto;top:auto;width:100%;max-width:320px;display:grid;grid-template-columns:1fr 1fr;margin-top:20px;padding:4px 10px}.hero-float div{border-bottom:1px solid #a9d7e52a!important}.hero-float div:nth-child(odd){margin-right:8px}.section{padding:24px 0}.section-intro{font-size:12px}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.service-card{min-height:128px;padding:12px}.service-card h3{font-size:11px}.service-card p{font-size:10px}.projects-contact .container{width:100%}.split-layout{display:block}.projects-panel{padding:25px 16px}.projects-heading{display:block}.projects-heading .btn{margin-top:12px}.project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.project-card img{height:100px}.project-card>div{min-height:52px}.project-card h3{font-size:10px}.contact-panel{padding:25px 16px 24px;border-left:0;border-top:1px solid #365064}.contact-panel form{max-width:520px}.contact-panel input,.contact-panel select,.contact-panel textarea{font-size:12px;min-height:40px}.contact-panel textarea{height:85px}.submit-btn{min-height:42px}.about-layout{grid-template-columns:1fr;gap:18px}.about-image{height:auto;max-height:240px}.about-copy h2{font-size:18px}.about-copy>p{font-size:12px}.value-grid{grid-template-columns:repeat(2,1fr);row-gap:14px}.value-grid>div{font-size:10px}.value-grid>div:nth-child(2){border-right:0}.tech-list{grid-template-columns:repeat(3,1fr);row-gap:14px}.tech-list>div:nth-child(3){border-right:0}.footer-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.footer-brand{border-right:0;border-bottom:1px solid #34495b;padding-bottom:10px;min-height:55px}.footer-brand img{max-width:220px}.footer-contact{border-right:0}.footer-links{border-right:0}.social p{white-space:normal}.copyright{padding:0 16px;line-height:1.5}}
 @media(max-width:390px){.brand{width:180px}.hero h1{font-size:27px}.hero-actions{gap:14px}.btn{padding:12px 13px}.watch-link{font-size:10px}.project-card img{height:82px}.service-card{padding:10px}.footer-main{gap:16px}}
+
+/* Mobile layout refinement: distribute vertical space through the page and avoid a large empty tail below the footer. */
+@media(max-width:760px){
+  .hero{min-height:390px}
+  .hero-content{padding-top:42px;padding-bottom:34px}
+  .section{padding:30px 0}
+  .service-grid{row-gap:13px}
+  .service-card{min-height:142px;padding:14px}
+  .projects-panel{padding-top:30px;padding-bottom:30px}
+  .projects-heading{margin-bottom:16px}
+  .project-grid{row-gap:13px}
+  .project-card img{height:108px}
+  .contact-panel{padding-top:30px;padding-bottom:30px}
+  .about{padding-top:28px;padding-bottom:28px}
+  .about-layout{gap:22px}
+  .value-grid{margin-top:18px;row-gap:18px}
+  .footer{padding-top:25px;padding-bottom:22px}
+  .footer-main{row-gap:24px}
+  .copyright{margin-top:18px}
+}
+@media(max-width:390px){
+  .hero{min-height:380px}
+  .service-card{min-height:136px}
+  .project-card img{height:94px}
+}
