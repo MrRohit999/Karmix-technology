@@ -1,21 +1,20 @@
-# KARMIX TECHNOLOGIES Website
+# Karmix Technology website
 
-Responsive static website for GitHub Pages. Built to match the approved KARMIX website reference with a white/orange/navy industrial automation style and the supplied KARMIX logo.
+Single-page static site for GitHub Pages (karmixtechnology.in).
 
 ## Files
-- `index.html` — website structure and content
-- `assets/style.css` — responsive styling
-- `assets/script.js` — mobile menu and email enquiry form
-- `assets/` — logo and locally stored visual assets
+- `index.html` – the whole site (HTML, CSS and JS in one file)
+- `assets/karmix-logo.png` – full logo (transparent background)
+- `assets/karmix-mark.png` – K emblem for the header and browser tab
+- `assets/karmix-mark-light.png` – K emblem for the dark footer
+- `CNAME` – custom domain for GitHub Pages
 
-## Publish on GitHub Pages
-1. Extract this ZIP.
-2. Upload `index.html`, `README.md`, and the entire `assets` folder to the root of your existing repository.
-3. Commit changes to your publishing branch.
-4. In GitHub, open **Settings → Pages**. Select **Deploy from a branch**, choose your publishing branch (usually `main`) and `/(root)`, then save.
+## Publish
+1. Upload these files to the root of the repository, replacing the old `index.html`.
+2. The old `styles.css`, `assets/style.css`, `assets/script.js` and the old images are no longer used and can be deleted.
+3. GitHub Settings → Pages → Deploy from branch `main`, folder `/ (root)`.
 
-The enquiry form opens the visitor's email app with the message prepared for `karmixtechnology@gmail.com`. It does not send automatically; automatic form processing requires a form backend.
-
-The website intentionally does not advertise LabVIEW, Python, C++, or .NET services. Update the phone number in `index.html` before publishing if `+91 86686 57463` is not your current business number.
-
-Layout update: the area below the footer now uses the same dark navy background, preventing a distracting white gap on Android Chrome when Desktop site is enabled.
+## Editing
+- Phone / WhatsApp number: search `8668657463` in `index.html`.
+- Email: search `karmixtechnology@gmail.com`.
+- The enquiry form opens the visitor's email app with the message filled in.
