@@ -1,7 +1,5 @@
-KARMIX TECHNOLOGY correction package
+KARMIX TECHNOLOGY - WEBSITE LOGO UPDATE
 
-This is an UPDATE package, not the full website. It uses the existing assets/style.css, assets/script.js, and photos already in your GitHub repository.
-
-Upload index.html to the repository root, replacing the existing index.html. Upload assets/karmix-logo-corrected.svg inside the existing assets folder. Keep all other existing files. Commit changes to main.
-
-The old JPG logo is not modified or removed; both header and footer now use the new corrected SVG logo.
+Upload index.html to repository root and assets/karmix-logo-hd.png to assets folder on main branch.
+The existing website CSS, JS and other images must remain in your repository. This ZIP contains only updated files.
+The logo is the HD image approved in this conversation, with TECHNOLOGY (not TECHNOLOGIES).
