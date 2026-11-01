@@ -5,65 +5,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Karmix Technology</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Karmix Technology, Pune: ECU testing (CAN/LIN), PCB FCT and end-of-line testers, traceability software, PLC/HMI and assembly line automation for manufacturers.">
-<meta property="og:title" content="Karmix Technology | Test, traceability and automation">
-<meta property="og:description" content="End-of-line testers, ECU test benches, traceability software and PLC/HMI automation from Pune, India.">
+<meta name="description" content="Karmix Technology, Pune: machine vision inspection, ECU and end-of-line testing, traceability software, PLC/HMI and assembly line automation for manufacturers.">
+<meta property="og:title" content="Karmix Technology | Machine vision, testing, traceability and automation">
+<meta property="og:description" content="Vision inspection systems, EOL test stations, traceability software and automation for production lines. Pune, India.">
 <meta property="og:image" content="assets/karmix-logo.png">
+<meta name="theme-color" content="#0E1116">
 <link rel="icon" type="image/png" href="assets/karmix-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a production-line page. Sticky header, then a split hero whose right half is a live end-of-line test station readout,
-   then quiet sections on cool paper: services grouped by line area, job sheets, a five-stage process rail, about, contact. */
+/* Layout: dark "control room" bands (hero, vision, contact) alternate with light "shop floor" bands (solutions, industries, projects).
+   The hero is a live vision inspection window; the rest stays quiet so that window is the memorable thing. */
 :root{
-  --paper:#F4F5F6;      /* cool, slightly blue-grey paper */
+  --night:#0E1116;      /* control room graphite */
+  --night-2:#161B22;    /* raised panels on dark */
+  --night-3:#1E242D;
+  --night-line:#2A313B;
+  --night-text:#C3CBD5;
+  --night-dim:#8691A0;
+  --paper:#F2F4F7;      /* light bands */
   --white:#FFFFFF;
-  --ink:#16181B;        /* logo black */
-  --steel:#5A626C;      /* secondary text */
-  --line:#D8DCE1;       /* hairlines */
+  --ink:#14171C;
+  --steel:#566070;
+  --line:#DCE0E6;
   --orange:#F57A0A;     /* logo orange */
-  --orange-ink:#B85500; /* orange for text on light, passes contrast */
-  --panel:#1A1E23;      /* test station screen */
-  --panel-2:#232830;
-  --panel-line:#343B45;
-  --panel-text:#C9D1DA;
-  --pass:#3FC07A;
+  --orange-hi:#FF9433;
+  --orange-ink:#B35300;
+  --ok:#2FC27A;
+  --ng:#F04B3E;
   --font-display:"Archivo","Arial Narrow",Arial,sans-serif;
-  --font-body:"Barlow","Segoe UI",Roboto,Arial,sans-serif;
-  --font-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
-  --wrap:1180px;
+  --font-body:"IBM Plex Sans","Segoe UI",Roboto,Arial,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --wrap:1220px;
   color-scheme:light;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--font-body);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
-h1,h2,h3{font-family:var(--font-display);font-stretch:112%;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1,h2,h3,h4{font-family:var(--font-display);font-stretch:112%;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.01em}
 p{margin:0}
-:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:2px}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 
 .wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.dark{background:var(--night);color:var(--night-text)}
+.dark h1,.dark h2,.dark h3,.dark h4{color:var(--white)}
 
 /* ---------- Header ---------- */
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--white)}
-.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--white);border-bottom:1px solid var(--line)}
-.site-header .wrap{display:flex;align-items:center;gap:28px;height:72px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--night)}
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(14,17,22,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--night-line);color:var(--white)}
+.site-header .wrap{display:flex;align-items:center;gap:24px;height:72px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
 .brand img{height:34px;width:auto}
 .brand-name{display:flex;flex-direction:column;line-height:1}
-.brand-name b{font-family:var(--font-display);font-stretch:125%;font-weight:900;font-size:21px;letter-spacing:.02em}
+.brand-name b{font-family:var(--font-display);font-stretch:125%;font-weight:900;font-size:21px;letter-spacing:.02em;color:var(--white)}
 .brand-name b span{color:var(--orange)}
-.brand-name small{font-family:var(--font-display);font-stretch:125%;font-weight:600;font-size:9.5px;letter-spacing:.38em;margin-top:4px;color:var(--steel)}
-.nav{display:flex;gap:4px;margin-left:auto}
-.nav a{text-decoration:none;font-weight:500;font-size:16px;padding:8px 12px;border-radius:6px;color:var(--ink)}
-.nav a:hover{background:var(--paper)}
-.header-cta{display:flex;align-items:center;gap:14px}
-.header-phone{font-weight:600;text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap}
-.menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:8px;width:44px;height:44px;cursor:pointer}
-.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:18px;height:2px;background:var(--ink);margin:0 auto;position:relative;transition:transform .2s}
+.brand-name small{font-family:var(--font-display);font-stretch:125%;font-weight:600;font-size:9.5px;letter-spacing:.38em;margin-top:4px;color:var(--night-dim)}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{text-decoration:none;font-weight:500;font-size:15.5px;padding:8px 12px;border-radius:6px;color:var(--night-text)}
+.nav a:hover{color:var(--white);background:var(--night-3)}
+.header-cta{display:flex;align-items:center;gap:16px}
+.header-phone{font-weight:500;text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--night-text);font-size:15.5px}
+.header-phone:hover{color:var(--white)}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--night-line);border-radius:8px;width:44px;height:44px;cursor:pointer}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:18px;height:2px;background:var(--white);margin:0 auto;position:relative;transition:transform .2s}
 .menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
 .menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
 .menu-btn[aria-expanded="true"] span{background:transparent}
@@ -71,220 +80,353 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .menu-btn[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
 
 /* ---------- Buttons ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:8px;font:600 16px/1 var(--font-body);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background .15s,border-color .15s,color .15s}
-.btn-primary{background:var(--orange);color:var(--ink)}
-.btn-primary:hover{background:#FF8A1F}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:8px;font:600 16px/1 var(--font-body);text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:background .15s,border-color .15s,color .15s,transform .15s}
+.btn-primary{background:var(--orange);color:#1A0E02}
+.btn-primary:hover{background:var(--orange-hi)}
+.btn-ghost{border-color:#3A4350;color:var(--white);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--white)}
 .btn-dark{background:var(--ink);color:var(--white)}
-.btn-dark:hover{background:#2B2F35}
-.btn-outline{border-color:var(--ink);color:var(--ink);background:transparent}
-.btn-outline:hover{background:var(--ink);color:var(--white)}
-.btn svg{width:18px;height:18px;flex-shrink:0}
+.btn-dark:hover{background:#2A2F37}
+.btn-sm{min-height:42px;padding:0 18px;font-size:15px}
 
 /* ---------- Hero ---------- */
-.hero{background:var(--white);border-bottom:1px solid var(--line);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr);gap:56px;align-items:center;padding-block:72px 80px}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--night-line)}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 500px at 78% 30%,rgba(245,122,10,.13),transparent 60%),
+  linear-gradient(var(--night-line) 1px,transparent 1px) 0 0/48px 48px,
+  linear-gradient(90deg,var(--night-line) 1px,transparent 1px) 0 0/48px 48px;
+  opacity:.55;-webkit-mask-image:linear-gradient(180deg,#000 40%,transparent);mask-image:linear-gradient(180deg,#000 40%,transparent);pointer-events:none}
+.hero > .wrap{position:relative;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:56px;align-items:center;padding-block:76px 64px}
 .hero-copy{min-width:0}
-.hero-kicker{display:inline-flex;align-items:center;gap:10px;font-weight:500;color:var(--steel);margin-bottom:22px}
-.hero-kicker i{width:8px;height:8px;border-radius:50%;background:var(--pass);box-shadow:0 0 0 4px rgba(63,192,122,.18)}
-.hero h1{font-size:clamp(40px,5.6vw,68px);font-weight:850;font-stretch:118%}
-.hero h1 .stripe{display:block;margin-top:.12em;color:var(--white);background:var(--ink);width:max-content;max-width:100%;padding:.04em .22em .1em;margin-left:-.22em;box-shadow:inset 0 -.14em 0 var(--orange)}
-.hero-lede{font-size:19px;color:var(--steel);max-width:34em;margin-top:26px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.hero-facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line);color:var(--steel);font-size:15px}
-.hero-facts b{color:var(--ink);font-weight:600}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:500;color:var(--night-text);padding:6px 14px 6px 10px;border:1px solid var(--night-line);border-radius:999px;background:var(--night-2);margin-bottom:28px}
+.hero-kicker i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(47,194,122,.18)}
+.hero h1{font-size:clamp(46px,6.4vw,84px);font-weight:880;font-stretch:120%;line-height:.98;letter-spacing:-.02em}
+.hero h1 span{display:block}
+.hero h1 span:last-child{color:transparent;-webkit-text-stroke:1.5px var(--orange)}
+.hero-lede{font-size:19.5px;color:var(--night-text);max-width:31em;margin-top:28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
 
-/* Test station panel */
-.station{min-width:0;background:var(--panel);color:var(--panel-text);border-radius:14px;box-shadow:0 30px 60px -30px rgba(22,24,27,.55),0 0 0 1px #0E1013;font-family:var(--font-mono);font-size:13px;overflow:hidden;position:relative}
-.station::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:repeating-linear-gradient(-45deg,var(--orange) 0 10px,var(--ink) 10px 20px)}
-.st-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;padding:20px 20px 14px;border-bottom:1px solid var(--panel-line)}
-.st-head .t{color:#fff;font-weight:500}
-.st-head .m{color:#8A95A3}
-.st-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--panel-line)}
-.st-meta div{padding:10px 20px;border-right:1px solid var(--panel-line);min-width:0}
-.st-meta div:last-child{border-right:0}
-.st-meta span{display:block;color:#7D8896;font-size:11px}
-.st-meta b{color:#fff;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;font-variant-numeric:tabular-nums}
-.st-steps{list-style:none;margin:0;padding:6px 0}
-.st-steps li{display:grid;grid-template-columns:22px minmax(0,1fr) auto 54px;gap:10px;align-items:center;padding:7px 20px;font-variant-numeric:tabular-nums}
-.st-steps li .n{color:#6B7684}
-.st-steps li .name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--panel-text)}
-.st-steps li .val{color:#fff;text-align:right;white-space:nowrap}
-.st-steps li .res{justify-self:end;font-weight:500;font-size:11px;padding:3px 7px;border-radius:4px;background:rgba(63,192,122,.14);color:var(--pass);min-width:46px;text-align:center}
-.st-steps li.wait .val{color:transparent}
-.st-steps li.wait .res{background:transparent;color:#56606C}
-.st-steps li.run{background:var(--panel-2)}
-.st-steps li.run .res{background:rgba(245,122,10,.16);color:var(--orange)}
-.st-steps li.run .name{color:#fff}
-.st-can{border-top:1px solid var(--panel-line);background:#14171B;padding:10px 20px;height:92px;overflow:hidden;color:#7E8A98;font-size:12px;line-height:1.55}
-.st-can div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.st-can .id{color:var(--orange)}
-.st-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-top:1px solid var(--panel-line)}
-.st-result{font-family:var(--font-display);font-stretch:125%;font-weight:900;font-size:22px;letter-spacing:.04em;padding:6px 16px;border-radius:6px;background:var(--pass);color:#06200F}
-.st-result.busy{background:var(--panel-2);color:var(--orange)}
-.st-foot .m{color:#8A95A3;font-size:12px;text-align:right}
+/* Vision window */
+.viswin{min-width:0;background:var(--night-2);border:1px solid var(--night-line);border-radius:14px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.02) inset;overflow:hidden}
+.vw-bar{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--night-line);font:500 13px/1.3 var(--font-mono);color:var(--night-text)}
+.vw-dots{display:flex;gap:6px}
+.vw-dots i{width:10px;height:10px;border-radius:50%;background:var(--night-line)}
+.vw-dots i:first-child{background:var(--orange)}
+.vw-bar .t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--white)}
+.vw-bar .tag{color:var(--night-dim);white-space:nowrap}
+.vw-stage{position:relative;background:#0A0C0F}
+.vw-stage canvas{display:block;width:100%;aspect-ratio:640/400;max-width:100%}
+.vw-live{position:absolute;left:12px;top:12px;display:flex;align-items:center;gap:6px;font:500 11px/1 var(--font-mono);color:var(--white);background:rgba(10,12,15,.7);padding:6px 8px;border-radius:4px}
+.vw-live i{width:7px;height:7px;border-radius:50%;background:var(--ng);animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.25}}
+.vw-hud{display:grid;grid-template-columns:auto repeat(3,minmax(0,1fr));border-top:1px solid var(--night-line);font-family:var(--font-mono)}
+.vw-hud > div{padding:12px 16px;border-right:1px solid var(--night-line);min-width:0}
+.vw-hud > div:last-child{border-right:0}
+.vw-hud span{display:block;font-size:11px;color:var(--night-dim)}
+.vw-hud b{display:block;font-weight:500;color:var(--white);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums}
+.vw-result{display:flex;align-items:center}
+.vw-result b{font-family:var(--font-display);font-stretch:125%;font-weight:900;font-size:20px;letter-spacing:.06em;padding:6px 14px;border-radius:6px;background:var(--ok);color:#03200F;min-width:78px;text-align:center}
+.vw-result b.ng{background:var(--ng);color:#2A0503}
+.vw-result b.busy{background:var(--night-3);color:var(--orange)}
 
-/* ---------- Toolchain strip ---------- */
-.strip{background:var(--ink);color:#C8CED6}
-.strip .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:12px 32px;padding-block:20px}
-.strip p{font-size:15px;color:#8E98A4}
-.strip ul{display:flex;flex-wrap:wrap;gap:8px 26px;list-style:none;margin:0;padding:0}
-.strip li{font-family:var(--font-display);font-stretch:110%;font-weight:600;font-size:15px;color:#fff}
+/* Capability rail under hero */
+.caps{position:relative;border-top:1px solid var(--night-line)}
+.caps .wrap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding-block:0}
+.cap{display:flex;align-items:center;gap:12px;padding:22px 18px;text-decoration:none;color:var(--night-text);border-right:1px solid var(--night-line);min-width:0;transition:background .15s,color .15s}
+.cap:first-child{border-left:1px solid var(--night-line)}
+.cap:hover{background:var(--night-2);color:var(--white)}
+.cap svg{width:24px;height:24px;flex-shrink:0;stroke:var(--orange);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.cap b{font-weight:600;font-size:15.5px;color:var(--white);display:block;line-height:1.25}
+.cap small{display:block;font-size:13.5px;color:var(--night-dim);line-height:1.3}
 
 /* ---------- Sections ---------- */
-.section{padding-block:96px}
-.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 56px;align-items:end;margin-bottom:52px}
-.section-head h2{font-size:clamp(32px,4vw,48px);font-weight:820}
-.section-head p{color:var(--steel);font-size:18px;max-width:36em}
+.section{padding-block:104px}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:20px 64px;align-items:end;margin-bottom:56px}
+.sec-label{display:inline-flex;align-items:center;gap:10px;font:500 14px/1 var(--font-mono);color:var(--orange-ink);margin-bottom:18px}
+.dark .sec-label{color:var(--orange)}
+.sec-label::before{content:"";width:22px;height:2px;background:currentColor}
+.sec-head h2{font-size:clamp(34px,4.2vw,52px);font-weight:840}
+.sec-head p{color:var(--steel);font-size:18.5px;max-width:34em}
+.dark .sec-head p{color:var(--night-text)}
 
-/* Services */
-.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.svc-group{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:30px 28px 18px;min-width:0}
-.svc-group header{display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.svc-icon{width:46px;height:46px;border-radius:10px;background:var(--ink);display:grid;place-items:center;flex-shrink:0}
-.svc-icon svg{width:24px;height:24px;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.svc-group h3{font-size:22px;font-weight:800}
-.svc-group > p{color:var(--steel);font-size:16px;margin-bottom:12px}
-.svc-list{list-style:none;margin:0;padding:0}
-.svc-list li{padding:16px 0;border-top:1px solid var(--line)}
-.svc-list b{display:block;font-weight:600;font-size:17px}
-.svc-list span{display:block;color:var(--steel);font-size:15.5px;line-height:1.5;margin-top:2px}
+/* ---------- Solutions tabs ---------- */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:40px}
+.tab{appearance:none;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;padding:14px 16px 16px;font:600 16.5px/1 var(--font-body);color:var(--steel);cursor:pointer;display:flex;align-items:center;gap:10px;border-radius:6px 6px 0 0}
+.tab svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tab:hover{color:var(--ink);background:rgba(20,23,28,.04)}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--orange)}
+.tab[aria-selected="true"] svg{stroke:var(--orange-ink)}
+.panel{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.panel h3{font-size:clamp(28px,3vw,38px);font-weight:820;margin-bottom:16px}
+.panel-copy > p{color:var(--steel);font-size:18px;max-width:32em}
+.offer{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.offer li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.offer svg{width:20px;height:20px;stroke:var(--orange-ink);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;margin-top:3px}
+.offer b{display:block;font-weight:600}
+.offer span{display:block;color:var(--steel);font-size:15.5px;line-height:1.5}
+.panel-cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.panel-cta .btn-line{border-color:var(--ink);color:var(--ink)}
+.panel-cta .btn-line:hover{background:var(--ink);color:var(--white)}
 
-/* Work */
-.work{background:var(--white);border-block:1px solid var(--line)}
-.jobs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.job{padding:30px 28px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:12px;min-width:0;background:var(--white);transition:background .2s}
-.job:hover{background:#FAFAFB}
-.job:nth-child(3n){border-right:0}
-.job:nth-last-child(-n+3){border-bottom:0}
+/* Mock screens (shared) */
+.screen{min-width:0;background:var(--night);color:var(--night-text);border-radius:14px;overflow:hidden;font:400 13px/1.5 var(--font-mono);box-shadow:0 30px 60px -36px rgba(14,17,22,.7);border:1px solid #0A0C10}
+.scr-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;padding:16px 20px;border-bottom:1px solid var(--night-line);position:relative}
+.scr-head::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:repeating-linear-gradient(-45deg,var(--orange) 0 9px,var(--night) 9px 18px)}
+.scr-head .t{color:var(--white);font-weight:500}
+.scr-head .m{color:var(--night-dim)}
+.scr-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.scr-table th{font-weight:400;font-size:11.5px;color:var(--night-dim);text-align:left;padding:10px 20px 6px}
+.scr-table td{padding:9px 20px;border-top:1px solid var(--night-line);color:var(--night-text);white-space:nowrap}
+.scr-table td:first-child{color:var(--white)}
+.scr-scroll{overflow-x:auto}
+.pill{display:inline-block;font-weight:500;font-size:11px;padding:3px 8px;border-radius:4px;background:rgba(47,194,122,.14);color:var(--ok);min-width:42px;text-align:center}
+.pill.ng{background:rgba(240,75,62,.16);color:var(--ng)}
+.pill.run{background:rgba(245,122,10,.16);color:var(--orange)}
+.pill.idle{background:var(--night-3);color:var(--night-dim)}
+.scr-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;padding:14px 20px;border-top:1px solid var(--night-line)}
+.big-res{font-family:var(--font-display);font-stretch:125%;font-weight:900;font-size:22px;letter-spacing:.05em;padding:5px 16px;border-radius:6px;background:var(--ok);color:#03200F}
+.scr-foot .m{color:var(--night-dim);font-size:12px}
+.can-log{border-top:1px solid var(--night-line);background:#0A0C10;padding:10px 20px;color:#748091;font-size:12px;line-height:1.6}
+.can-log div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.can-log .id{color:var(--orange)}
+/* Traceability timeline */
+.trace-search{display:flex;gap:10px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--night-line)}
+.trace-search .box{flex:1;min-width:0;background:var(--night-2);border:1px solid var(--night-line);border-radius:6px;padding:9px 12px;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trace-search .go{background:var(--orange);color:#1A0E02;border-radius:6px;padding:9px 14px;font-weight:500}
+.tl{list-style:none;margin:0;padding:14px 20px 8px}
+.tl li{display:grid;grid-template-columns:62px 14px minmax(0,1fr) auto;gap:12px;align-items:start;padding-bottom:14px;position:relative}
+.tl li::before{content:"";position:absolute;left:calc(62px + 12px + 6px);top:14px;bottom:0;width:2px;background:var(--night-line)}
+.tl li:last-child::before{display:none}
+.tl .tm{color:var(--night-dim);font-variant-numeric:tabular-nums}
+.tl .dot{width:14px;height:14px;border-radius:50%;border:3px solid var(--ok);background:var(--night);margin-top:3px;position:relative;z-index:1}
+.tl .w b{display:block;color:var(--white);font-weight:500}
+.tl .w span{color:var(--night-dim);font-size:12px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* HMI */
+.hmi-line{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding:20px}
+.st{background:var(--night-2);border:1px solid var(--night-line);border-radius:8px;padding:12px;min-width:0;position:relative}
+.st::after{content:"";position:absolute;right:-10px;top:50%;width:10px;height:2px;background:var(--night-line)}
+.st:last-child::after{display:none}
+.st b{display:block;color:var(--white);font-weight:500}
+.st span{display:block;font-size:11.5px;color:var(--night-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st .pill{margin-top:8px}
+.st.active{border-color:var(--orange)}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--night-line)}
+.kpis > div{padding:14px 20px;border-right:1px solid var(--night-line);min-width:0}
+.kpis > div:last-child{border-right:0}
+.kpis span{display:block;font-size:11.5px;color:var(--night-dim)}
+.kpis b{display:block;font-family:var(--font-display);font-stretch:115%;font-weight:800;font-size:26px;color:var(--white);font-variant-numeric:tabular-nums}
+.bar{height:6px;background:var(--night-3);border-radius:3px;margin-top:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--orange);border-radius:3px}
+/* Integration diagram */
+.integ{padding:24px 20px;display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr) 40px minmax(0,1fr);align-items:center;gap:0}
+.integ .col{display:grid;gap:10px;min-width:0}
+.node{background:var(--night-2);border:1px solid var(--night-line);border-radius:8px;padding:10px 12px;color:var(--white);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.node small{display:block;color:var(--night-dim);font-size:11px}
+.node.hub{border-color:var(--orange);background:rgba(245,122,10,.08);text-align:center;padding:22px 12px}
+.node.hub b{font-family:var(--font-display);font-stretch:120%;font-size:17px;font-weight:800;color:var(--white)}
+.wire{height:2px;background:repeating-linear-gradient(90deg,var(--orange) 0 6px,transparent 6px 11px);background-size:22px 2px;animation:flow 1s linear infinite}
+@keyframes flow{to{background-position:22px 0}}
+
+/* ---------- Vision section ---------- */
+.vision{position:relative;overflow:hidden}
+.vision::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 420px at 10% 0%,rgba(245,122,10,.10),transparent 60%);pointer-events:none}
+.vision .wrap{position:relative}
+.vgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--night-line);border:1px solid var(--night-line);border-radius:14px;overflow:hidden}
+.vcard{background:var(--night);padding:26px 24px 26px;display:flex;flex-direction:column;gap:12px;min-width:0;transition:background .2s}
+.vcard:hover{background:var(--night-2)}
+.vcard svg.ill{width:100%;height:auto;aspect-ratio:160/88;max-width:100%;background:#0A0C10;border:1px solid var(--night-line);border-radius:8px}
+.vcard h3{font-size:19px;font-weight:780;margin-top:6px}
+.vcard p{font-size:15.5px;color:var(--night-dim);line-height:1.5}
+
+.pipe{margin-top:72px}
+.pipe h3{font-size:clamp(24px,2.6vw,32px);font-weight:800;margin-bottom:28px}
+.pipe ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;counter-reset:p}
+.pipe li{position:relative;background:var(--night-2);border:1px solid var(--night-line);border-radius:12px;padding:22px 20px;min-width:0}
+.pipe li::after{content:"";position:absolute;right:-14px;top:38px;width:14px;height:2px;background:var(--orange)}
+.pipe li:last-child::after{display:none}
+.pipe li:last-child{border-color:var(--orange)}
+.pipe .n{font:500 13px/1 var(--font-mono);color:var(--orange)}
+.pipe b{display:block;color:var(--white);font-weight:600;font-size:17px;margin:10px 0 6px;line-height:1.3}
+.pipe span{display:block;font-size:15px;color:var(--night-dim);line-height:1.5}
+
+.vision-cta{margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 40px;align-items:center;padding:32px 36px;border-radius:14px;background:linear-gradient(110deg,rgba(245,122,10,.16),rgba(245,122,10,.04));border:1px solid rgba(245,122,10,.35)}
+.vision-cta h3{font-size:clamp(22px,2.4vw,28px);font-weight:800;margin-bottom:6px}
+.vision-cta p{color:var(--night-text)}
+
+/* ---------- Industries ---------- */
+.ind{background:var(--white);border-block:1px solid var(--line)}
+.ind-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.ind-card{border:1px solid var(--line);border-radius:12px;padding:26px 26px 24px;display:grid;grid-template-columns:48px minmax(0,1fr);gap:18px;align-items:start;background:var(--white);transition:border-color .15s,box-shadow .15s}
+.ind-card:hover{border-color:#C4CAD3;box-shadow:0 18px 36px -28px rgba(20,23,28,.35)}
+.ind-ic{width:48px;height:48px;border-radius:10px;background:var(--paper);display:grid;place-items:center}
+.ind-ic svg{width:26px;height:26px;stroke:var(--ink);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ind-card h3{font-size:19px;font-weight:780;margin-bottom:6px}
+.ind-card p{color:var(--steel);font-size:15.5px;line-height:1.5}
+
+/* ---------- Projects ---------- */
+.jobs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.job{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px 26px 24px;display:flex;flex-direction:column;gap:12px;min-width:0;position:relative;overflow:hidden}
+.job::before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:var(--ink);transform:scaleX(.18);transform-origin:left;transition:transform .35s,background .35s}
+.job:hover::before{transform:scaleX(1);background:var(--orange)}
 .job-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .job-area{font-weight:600;font-size:14px;color:var(--orange-ink)}
-.job-code{font-family:var(--font-mono);font-size:12px;color:#8A939D}
+.job-code{font:400 12px/1 var(--font-mono);color:#8A939D}
 .job h3{font-size:22px;font-weight:800}
-.job p{color:var(--steel);font-size:16px}
+.job p{color:var(--steel);font-size:16px;line-height:1.55}
 .job dl{margin:auto 0 0;padding-top:16px;border-top:1px dashed var(--line);display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;font-size:14.5px}
 .job dt{color:#8A939D}
 .job dd{margin:0;font-weight:500}
 
-/* Process */
-.process ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;position:relative}
-.process li{position:relative;padding:0 22px 0 0;min-width:0}
-.process .dot{display:flex;align-items:center;gap:0;margin-bottom:22px}
-.process .dot b{width:44px;height:44px;border-radius:50%;background:var(--white);border:2px solid var(--ink);display:grid;place-items:center;font-family:var(--font-display);font-stretch:110%;font-weight:800;font-size:17px;flex-shrink:0;position:relative;z-index:1}
+/* Toolchain strip */
+.strip{background:var(--ink);color:#C8CED6;overflow:hidden}
+.strip .wrap{display:flex;align-items:center;gap:32px;padding-block:22px}
+.strip p{font-size:14.5px;color:#8E98A4;flex-shrink:0}
+.marq{flex:1;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marq ul{display:flex;gap:40px;list-style:none;margin:0;padding:0;width:max-content;animation:marq 38s linear infinite}
+.marq li{font-family:var(--font-display);font-stretch:112%;font-weight:650;font-size:16px;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:40px}
+.marq li::after{content:"";width:6px;height:6px;background:var(--orange);transform:rotate(45deg)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- Process ---------- */
+.process ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
+.process li{position:relative;padding:0 24px 0 0;min-width:0}
+.process .dot{display:flex;align-items:center;margin-bottom:22px}
+.process .dot b{width:46px;height:46px;border-radius:50%;background:var(--white);border:2px solid var(--ink);display:grid;place-items:center;font-family:var(--font-display);font-stretch:110%;font-weight:800;font-size:17px;flex-shrink:0;position:relative;z-index:1}
 .process li:first-child .dot b{background:var(--orange);border-color:var(--orange)}
-.process .dot::after{content:"";flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--ink) 0 8px,transparent 8px 14px);margin-right:-22px}
+.process .dot::after{content:"";flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--ink) 0 8px,transparent 8px 14px);margin-right:-24px}
 .process li:last-child .dot::after{display:none}
 .process h3{font-size:19px;font-weight:800;margin-bottom:8px}
-.process p{color:var(--steel);font-size:15.5px}
+.process p{color:var(--steel);font-size:15.5px;line-height:1.55}
 
-/* About */
+/* ---------- About ---------- */
 .about{background:var(--white);border-top:1px solid var(--line)}
-.about .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:center}
-.about-logo{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:48px 40px;display:grid;place-items:center}
-.about-logo img{width:100%;max-width:420px;height:auto}
-.about h2{font-size:clamp(30px,3.6vw,44px);font-weight:820;margin-bottom:22px}
+.about .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:72px;align-items:center}
+.about-logo{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:56px 44px;display:grid;place-items:center;position:relative;overflow:hidden}
+.about-logo::before{content:"";position:absolute;inset:0;background:linear-gradient(var(--line) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/32px 32px;opacity:.6}
+.about-logo img{width:100%;max-width:420px;height:auto;position:relative}
+.about h2{font-size:clamp(32px,3.8vw,48px);font-weight:840;margin-bottom:22px}
 .about-copy > p{color:var(--steel);font-size:18px;margin-bottom:16px;max-width:36em}
-.values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px;margin-top:30px;padding-top:28px;border-top:1px solid var(--line)}
-.values div{display:flex;gap:14px;align-items:flex-start;min-width:0}
+.values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 32px;margin-top:30px;padding-top:28px;border-top:1px solid var(--line)}
+.values > div{display:flex;gap:14px;align-items:flex-start;min-width:0}
 .values svg{width:22px;height:22px;flex-shrink:0;stroke:var(--orange-ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:3px}
 .values b{display:block;font-weight:600}
 .values span{color:var(--steel);font-size:15.5px;line-height:1.5}
 
-/* Contact */
-.contact{background:var(--ink);color:#E6E9ED}
+/* ---------- Contact ---------- */
 .contact .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}
-.contact h2{font-size:clamp(32px,4vw,48px);font-weight:820;color:#fff;margin-bottom:18px}
-.contact-intro{color:#A9B2BD;font-size:18px;max-width:30em;margin-bottom:34px}
+.contact h2{font-size:clamp(34px,4.2vw,52px);font-weight:840;margin-bottom:18px}
+.contact-intro{color:var(--night-text);font-size:18px;max-width:30em;margin-bottom:34px}
 .channels{display:grid;gap:12px}
-.channel{display:flex;align-items:center;gap:16px;padding:16px 18px;border:1px solid #2F343B;border-radius:10px;text-decoration:none;transition:border-color .15s,background .15s;min-width:0}
-a.channel:hover{border-color:var(--orange);background:#1E2227}
+.channel{display:flex;align-items:center;gap:16px;padding:16px 18px;border:1px solid var(--night-line);border-radius:10px;text-decoration:none;transition:border-color .15s,background .15s;min-width:0;background:var(--night-2)}
+a.channel:hover{border-color:var(--orange)}
 .channel svg{width:22px;height:22px;flex-shrink:0;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.channel small{display:block;color:#8E98A4;font-size:13.5px}
-.channel b{display:block;color:#fff;font-weight:600;font-size:17px;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
-.form-card{background:var(--white);color:var(--ink);border-radius:14px;padding:36px;min-width:0}
-.form-card h3{font-size:24px;font-weight:800;margin-bottom:6px}
+.channel small{display:block;color:var(--night-dim);font-size:13.5px}
+.channel b{display:block;color:var(--white);font-weight:600;font-size:17px;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.form-card{background:var(--white);color:var(--ink);border-radius:16px;padding:38px;min-width:0}
+.form-card h3{font-size:25px;font-weight:820;margin-bottom:6px;color:var(--ink)}
 .form-card > p{color:var(--steel);margin-bottom:24px;font-size:16px}
 .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .field{display:flex;flex-direction:column;gap:6px;min-width:0}
 .field.full{grid-column:1/-1}
 .field label{font-weight:600;font-size:14.5px}
 .field label em{font-style:normal;font-weight:400;color:var(--steel)}
-.field input,.field select,.field textarea{font:400 16px/1.4 var(--font-body);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px;width:100%;min-height:48px}
+.field input,.field select,.field textarea{font:400 16px/1.4 var(--font-body);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px;width:100%;min-height:50px}
 .field textarea{min-height:120px;resize:vertical}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(245,122,10,.35);background:var(--white)}
-.field .err{color:#B42318;font-size:13.5px;min-height:0}
+.field .err{color:#B42318;font-size:13.5px}
 .field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#B42318}
 .form-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:22px}
 .form-note{color:var(--steel);font-size:14px;flex:1;min-width:200px}
 .form-status{margin-top:16px;padding:12px 14px;border-radius:8px;background:#EAF7EF;color:#155C33;font-size:15px}
 
-/* Footer */
-.site-footer{background:#0F1113;color:#9BA4AF;font-size:15px}
-.site-footer .wrap{padding-block:56px 28px}
-.foot-top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:40px;padding-bottom:40px;border-bottom:1px solid #24282D}
+/* ---------- Footer ---------- */
+.site-footer{background:#090B0E;color:#97A1AD;font-size:15px}
+.site-footer .wrap{padding-block:60px 28px}
+.foot-top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px;padding-bottom:40px;border-bottom:1px solid #20252B}
+.foot-top > div{min-width:0}
 .foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}
 .foot-brand img{height:38px;width:auto}
-.foot-brand .brand-name b{color:#fff}
-.foot-brand .brand-name small{color:#8E98A4}
 .foot-tag{font-family:var(--font-display);font-stretch:118%;font-weight:700;color:#fff;font-size:15px;letter-spacing:.06em}
-.site-footer h4{color:#fff;font-family:var(--font-display);font-stretch:110%;font-weight:700;font-size:16px;margin:0 0 14px}
-.foot-top > div{min-width:0}
-.site-footer li{overflow-wrap:anywhere}
+.site-footer h4{color:#fff;font-stretch:110%;font-weight:700;font-size:16px;margin:0 0 14px}
 .site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.site-footer li{overflow-wrap:anywhere}
 .site-footer a{text-decoration:none}
 .site-footer a:hover{color:var(--orange)}
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-top:24px;font-size:14px}
 
-/* WhatsApp float */
-.wa-float{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:40;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);transition:transform .15s}
+.wa-float{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:40;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.5);transition:transform .15s}
 .wa-float:hover{transform:scale(1.06)}
 .wa-float svg{width:30px;height:30px;fill:#fff}
 
 /* ---------- Responsive ---------- */
-@media (max-width:1060px){
+@media (max-width:1140px){
   .header-phone{display:none}
-  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:48px;padding-block:56px 64px}
-  .svc-grid{grid-template-columns:minmax(0,1fr)}
-  .jobs{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .job:nth-child(3n){border-right:1px solid var(--line)}
-  .job:nth-child(2n){border-right:0}
-  .job:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
-  .job:nth-last-child(-n+2){border-bottom:0}
+  .caps .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cap:nth-child(4){border-left:1px solid var(--night-line)}
+  .cap:nth-child(n+4){border-top:1px solid var(--night-line)}
+  .vgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:1020px){
+  .hero > .wrap{grid-template-columns:minmax(0,1fr);gap:48px;padding-block:60px 56px}
+  .panel{grid-template-columns:minmax(0,1fr);gap:36px}
+  .ind-grid,.jobs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pipe ol{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pipe li::after{display:none}
+  .pipe li:last-child{grid-column:1/-1}
   .process ol{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 24px}
   .process .dot::after{display:none}
   .about .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr);gap:44px}
-  .about-logo{max-width:520px}
-}
-@media (max-width:860px){
-  .menu-btn{display:block}
-  .header-cta .btn{display:none}
-  .nav{position:absolute;left:0;right:0;top:72px;flex-direction:column;gap:0;background:var(--white);border-bottom:1px solid var(--line);padding:8px max(20px,env(safe-area-inset-right,0px)) 16px max(20px,env(safe-area-inset-left,0px));box-shadow:0 20px 30px -20px rgba(0,0,0,.25)}
-  .nav a{padding:14px 4px;border-bottom:1px solid var(--line);border-radius:0;font-size:17px}
-  .nav a:last-child{border-bottom:0}
-  .nav:not(.open){display:none}
-  .section{padding-block:72px}
-  .section-head{grid-template-columns:minmax(0,1fr);margin-bottom:36px}
-  .foot-top{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .about-logo{max-width:560px}
+  .foot-top{grid-template-columns:repeat(3,minmax(0,1fr))}
   .foot-top > div:first-child{grid-column:1/-1}
 }
+@media (max-width:900px){
+  .menu-btn{display:block}
+  .header-cta{display:none}
+  .nav{position:absolute;left:0;right:0;top:72px;flex-direction:column;gap:0;background:var(--night);border-bottom:1px solid var(--night-line);padding:8px max(20px,env(safe-area-inset-right,0px)) 18px max(20px,env(safe-area-inset-left,0px))}
+  .nav a{padding:15px 4px;border-bottom:1px solid var(--night-line);border-radius:0;font-size:17px}
+  .nav a:hover{background:none}
+  .nav .nav-quote{margin-top:14px;border-bottom:0;text-align:center;background:var(--orange);color:#1A0E02;border-radius:8px;font-weight:600}
+  .nav:not(.open){display:none}
+  .section{padding-block:76px}
+  .sec-head{grid-template-columns:minmax(0,1fr);margin-bottom:40px}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{white-space:nowrap}
+  .vision-cta{grid-template-columns:minmax(0,1fr);padding:26px 22px}
+}
+@media (min-width:901px){.nav .nav-quote{display:none}}
 @media (max-width:640px){
   body{font-size:16px}
   .hero-lede{font-size:17.5px}
-  .jobs{grid-template-columns:minmax(0,1fr)}
-  .job{border-right:0!important;border-bottom:1px solid var(--line)!important}
-  .job:last-child{border-bottom:0!important}
-  .process ol{grid-template-columns:minmax(0,1fr)}
-  .values{grid-template-columns:minmax(0,1fr)}
-  .form-grid{grid-template-columns:minmax(0,1fr)}
-  .form-card{padding:26px 20px}
-  .st-meta{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  .st-meta div:nth-child(2){border-right:0}
-  .st-meta div:nth-child(3){grid-column:1/-1;border-top:1px solid var(--panel-line)}
-  .st-steps li{grid-template-columns:minmax(0,1fr) auto 50px;padding:7px 16px}
-  .st-steps li .n{display:none}
-  .st-head,.st-meta div,.st-can,.st-foot{padding-left:16px;padding-right:16px}
-  .brand-name small{letter-spacing:.3em}
+  .hero h1 span:last-child{-webkit-text-stroke:1.2px var(--orange)}
+  .caps .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .cap{border-left:0!important;border-right:0;border-top:1px solid var(--night-line);padding:16px 4px}
+  .cap:nth-child(odd){border-right:1px solid var(--night-line)}
+  .cap:first-child{border-top:0}.cap:nth-child(2){border-top:0}
+  .cap:nth-child(2n){padding-left:14px}
+  .cap:last-child{grid-column:1/-1;border-right:0}
+  .cap small{display:none}
+  .vw-hud{grid-template-columns:auto minmax(0,1fr) minmax(0,1fr)}
+  .vw-hud > div:nth-child(4){display:none}
+  .vw-hud > div:nth-child(3){border-right:0}
+  .vw-bar .tag{display:none}
+  .vw-hud > div{padding:12px}
+  .vw-hud b{font-size:13px}
+  .vgrid,.ind-grid,.jobs,.pipe ol,.process ol,.values,.form-grid{grid-template-columns:minmax(0,1fr)}
+  .hmi-line{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .st:nth-child(3)::after{display:none}
+  .kpis b{font-size:22px}
+  .kpis > div{padding:12px 14px}
+  .integ{grid-template-columns:minmax(0,1fr);gap:10px}
+  .wire{width:2px;height:18px;margin:0 auto;background:repeating-linear-gradient(180deg,var(--orange) 0 5px,transparent 5px 9px)}
+  .form-card{padding:28px 20px}
+  .scr-head,.scr-foot,.trace-search,.tl,.can-log{padding-left:16px;padding-right:16px}
+  .scr-table th,.scr-table td{padding-left:16px;padding-right:12px}
+  .strip .wrap{flex-direction:column;align-items:flex-start;gap:12px}
+  .strip .marq{width:100%}
+  .foot-top{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
@@ -292,19 +434,21 @@ a.channel:hover{border-color:var(--orange);background:#1E2227}
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Karmix Technology home">
-      <img src="assets/karmix-mark.png" alt="" width="58" height="34">
+      <img src="assets/karmix-mark-light.png" alt="" width="58" height="34">
       <span class="brand-name"><b>KARMI<span>X</span></b><small>TECHNOLOGY</small></span>
     </a>
     <nav class="nav" id="nav" aria-label="Main">
-      <a href="#services">Services</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#vision">Machine vision</a>
+      <a href="#industries">Industries</a>
       <a href="#work">Projects</a>
-      <a href="#process">How we work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
+      <a class="nav-quote" href="#contact">Get a quote</a>
     </nav>
     <div class="header-cta">
       <a class="header-phone" href="tel:+918668657463">+91 86686 57463</a>
-      <a class="btn btn-dark" href="#contact">Discuss a project</a>
+      <a class="btn btn-primary btn-sm" href="#contact">Get a quote</a>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
   </div>
@@ -312,134 +456,382 @@ a.channel:hover{border-color:var(--orange);background:#1E2227}
 
 <main id="top">
 
-<!-- HERO -->
-<section class="hero">
+<!-- ================= HERO ================= -->
+<section class="hero dark">
   <div class="wrap">
     <div class="hero-copy">
-      <p class="hero-kicker"><i></i>Test, traceability and automation engineering in Pune</p>
-      <h1>Every part tested.<span class="stripe">Every part traced.</span></h1>
-      <p class="hero-lede">Karmix Technology builds end-of-line testers, ECU test benches, traceability software and PLC/HMI automation for manufacturing lines. We design the hardware setup and the software, install it at your plant, and support it after go-live.</p>
+      <p class="hero-kicker"><i></i>Industrial automation engineering, Pune</p>
+      <h1><span>Inspect.</span><span>Test.</span><span>Trace.</span></h1>
+      <p class="hero-lede">Karmix Technology builds machine vision inspection, end-of-line testers, traceability software and PLC automation that stop defects before they leave your line. We design it, build it, install it at your plant and support it after go-live.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Discuss your requirement</a>
-        <a class="btn btn-outline" href="#work">See our projects</a>
-      </div>
-      <div class="hero-facts">
-        <span><b>CAN / LIN</b> ECU testing</span>
-        <span><b>FCT &amp; EOL</b> test stations</span>
-        <span><b>SQL + API</b> traceability</span>
-        <span><b>PLC / HMI</b> machines</span>
+        <a class="btn btn-primary" href="#contact">Discuss your project</a>
+        <a class="btn btn-ghost" href="#vision">Explore vision solutions</a>
       </div>
     </div>
 
-    <div class="station" aria-label="Example end-of-line test result screen from a Karmix test station">
-      <div class="st-head">
-        <span class="t">EOL Station 03 &middot; Body control module</span>
-        <span class="m">Sample screen</span>
+    <figure class="viswin" style="margin:0" aria-label="Animated example of a Karmix vision inspection screen checking a PCB assembly">
+      <div class="vw-bar">
+        <span class="vw-dots"><i></i><i></i><i></i></span>
+        <span class="t">Vision Station 02 &middot; PCB assembly inspection</span>
+        <span class="tag">Sample screen</span>
       </div>
-      <div class="st-meta">
-        <div><span>Serial no.</span><b id="stSerial">KX2611-0457</b></div>
-        <div><span>Operator</span><b>Shift B / OP-12</b></div>
-        <div><span>Cycle time</span><b id="stTime">18.4 s</b></div>
+      <div class="vw-stage">
+        <canvas id="vis" width="640" height="400"></canvas>
+        <span class="vw-live"><i></i>CAM 1 &middot; 5 MP</span>
       </div>
-      <ol class="st-steps" id="stSteps">
-        <li><span class="n">01</span><span class="name">Supply current @ 12.0 V</span><span class="val">142 mA</span><span class="res">PASS</span></li>
-        <li><span class="n">02</span><span class="name">CAN wake-up, 500 kbit/s</span><span class="val">ACK</span><span class="res">PASS</span></li>
-        <li><span class="n">03</span><span class="name">Read part no. (UDS 22 F187)</span><span class="val">BCM-2041</span><span class="res">PASS</span></li>
-        <li><span class="n">04</span><span class="name">LIN slave nodes, 19.2 kbit/s</span><span class="val">3 / 3</span><span class="res">PASS</span></li>
-        <li><span class="n">05</span><span class="name">Output driver load</span><span class="val">2.41 A</span><span class="res">PASS</span></li>
-        <li><span class="n">06</span><span class="name">Firmware checksum</span><span class="val">0x7A3F</span><span class="res">PASS</span></li>
-        <li><span class="n">07</span><span class="name">Label print + upload to traceability</span><span class="val">Saved</span><span class="res">PASS</span></li>
-      </ol>
-      <div class="st-can" id="stCan" aria-hidden="true">
-        <div>0.0124 &nbsp;<span class="id">18DAF110</span> [8] 03 22 F1 87 00 00 00 00</div>
-        <div>0.0189 &nbsp;<span class="id">18DA10F1</span> [8] 10 0B 62 F1 87 42 43 4D</div>
-        <div>0.0201 &nbsp;<span class="id">18DAF110</span> [8] 30 00 00 00 00 00 00 00</div>
-        <div>0.0233 &nbsp;<span class="id">18DA10F1</span> [8] 21 2D 32 30 34 31 00 00</div>
+      <div class="vw-hud">
+        <div class="vw-result"><b id="vRes">OK</b></div>
+        <div><span>Serial</span><b id="vSerial">KX2611-0457</b></div>
+        <div><span>Inspection time</span><b id="vTime">41 ms</b></div>
+        <div><span>Shift count OK / NG</span><b id="vCount">2,418 / 7</b></div>
       </div>
-      <div class="st-foot">
-        <span class="st-result" id="stResult">PASS</span>
-        <span class="m" id="stCount">Today: 1,284 tested &middot; 0.4% reject</span>
+    </figure>
+  </div>
+
+  <div class="caps">
+    <div class="wrap">
+      <a class="cap" href="#vision"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span><b>Machine vision</b><small>Inspection &amp; measurement</small></span></a>
+      <a class="cap" href="#solutions" data-tab="testing"><svg viewBox="0 0 24 24"><path d="M3 12h3l2-6 4 12 2-6h7"/></svg><span><b>ECU &amp; EOL testing</b><small>CAN, LIN, FCT</small></span></a>
+      <a class="cap" href="#solutions" data-tab="trace"><svg viewBox="0 0 24 24"><path d="M4 5v14M7 5v14M10 5v14M14 5v14M17 5v14M20 5v14"/></svg><span><b>Traceability</b><small>Every serial, every result</small></span></a>
+      <a class="cap" href="#solutions" data-tab="auto"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4M7 9h4M7 12h7"/></svg><span><b>PLC &amp; HMI</b><small>Stations &amp; machines</small></span></a>
+      <a class="cap" href="#solutions" data-tab="soft"><svg viewBox="0 0 24 24"><path d="M5 12.5a7 7 0 0 1 14 0M8.5 15a3.5 3.5 0 0 1 7 0"/><circle cx="12" cy="18" r="1.2"/></svg><span><b>Software &amp; IoT</b><small>APIs, BLE, apps</small></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOLUTIONS ================= -->
+<section class="section" id="solutions">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-label">Solutions</p>
+        <h2>One partner for quality, data and automation on your line</h2>
+      </div>
+      <p>Each system is engineered around your product, your station layout and your quality plan. Vision, testing, traceability and PLC control work together, so a part that fails is caught, rejected and recorded automatically.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Solutions">
+      <button class="tab" role="tab" id="t-vision" aria-controls="p-vision" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Machine vision</button>
+      <button class="tab" role="tab" id="t-testing" aria-controls="p-testing" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24"><path d="M3 12h3l2-6 4 12 2-6h7"/></svg>Testing</button>
+      <button class="tab" role="tab" id="t-trace" aria-controls="p-trace" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24"><path d="M4 5v14M7 5v14M10 5v14M14 5v14M17 5v14M20 5v14"/></svg>Traceability</button>
+      <button class="tab" role="tab" id="t-auto" aria-controls="p-auto" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>Automation</button>
+      <button class="tab" role="tab" id="t-soft" aria-controls="p-soft" aria-selected="false" tabindex="-1"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>Software &amp; IoT</button>
+    </div>
+
+    <!-- Vision -->
+    <div class="panel" role="tabpanel" id="p-vision" aria-labelledby="t-vision">
+      <div class="panel-copy">
+        <h3>Vision inspection that sees every part</h3>
+        <p>Cameras, lighting and inspection software that check presence, position, print, codes and surface quality at line speed, then tell the PLC to pass or reject.</p>
+        <ul class="offer">
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>Assembly verification</b><span>Missing, wrong or misplaced components, connector pins and fasteners.</span></p></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>Code reading &amp; OCR</b><span>Barcodes, Data Matrix and printed text read and checked against your database.</span></p></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>Measurement &amp; defect detection</b><span>Dimensions, gaps and surface defects such as scratches, dents and contamination.</span></p></li>
+        </ul>
+        <div class="panel-cta"><a class="btn btn-dark" href="#vision">See all vision capabilities</a></div>
+      </div>
+      <div class="screen">
+        <div class="scr-head"><span class="t">Inspection recipe &middot; BCM-2041 top side</span><span class="m">Sample screen</span></div>
+        <div class="scr-scroll">
+          <table class="scr-table">
+            <thead><tr><th>Tool</th><th>Region</th><th>Limit</th><th>Measured</th><th>Result</th></tr></thead>
+            <tbody>
+              <tr><td>Data Matrix read</td><td>Label</td><td>Grade &ge; B</td><td>A</td><td><span class="pill">OK</span></td></tr>
+              <tr><td>OCR print check</td><td>U1</td><td>KX-MCU 2041</td><td>KX-MCU 2041</td><td><span class="pill">OK</span></td></tr>
+              <tr><td>Presence</td><td>R1&ndash;R6</td><td>6 of 6</td><td>6</td><td><span class="pill">OK</span></td></tr>
+              <tr><td>Polarity</td><td>C1, C2</td><td>Marking left</td><td>Left</td><td><span class="pill">OK</span></td></tr>
+              <tr><td>Pin position</td><td>J1</td><td>&plusmn; 0.15 mm</td><td>0.31 mm</td><td><span class="pill ng">NG</span></td></tr>
+              <tr><td>Offset</td><td>D1</td><td>&le; 0.20 mm</td><td>0.08 mm</td><td><span class="pill">OK</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="scr-foot"><span class="big-res" style="background:var(--ng);color:#2A0503">NG</span><span class="m">Reject signal sent to PLC &middot; image saved to traceability</span></div>
+      </div>
+    </div>
+
+    <!-- Testing -->
+    <div class="panel" role="tabpanel" id="p-testing" aria-labelledby="t-testing" hidden>
+      <div class="panel-copy">
+        <h3>Testing that proves every unit works</h3>
+        <p>Functional, end-of-line and communication testing for PCBs, ECUs and finished assemblies, with limits, reports and results stored against each serial number.</p>
+        <ul class="offer">
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>ECU testing</b><span>CAN and LIN based testing with PEAK-System hardware, diagnostics and DTC checks.</span></p></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>FCT &amp; EOL test stations</b><span>Functional and end-of-line testers with fixtures, limits and test reports.</span></p></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>IC flashing &amp; programming</b><span>Production flashing with ST-LINK, Renesas and Cyclone programmers and checksum verification.</span></p></li>
+        </ul>
+      </div>
+      <div class="screen">
+        <div class="scr-head"><span class="t">EOL Station 03 &middot; Body control module</span><span class="m">Sample screen</span></div>
+        <div class="scr-scroll">
+          <table class="scr-table">
+            <thead><tr><th>Step</th><th>Measured</th><th>Result</th></tr></thead>
+            <tbody>
+              <tr><td>Supply current @ 12.0 V</td><td>142 mA</td><td><span class="pill">PASS</span></td></tr>
+              <tr><td>CAN wake-up, 500 kbit/s</td><td>ACK</td><td><span class="pill">PASS</span></td></tr>
+              <tr><td>Read part no. (UDS 22 F187)</td><td>BCM-2041</td><td><span class="pill">PASS</span></td></tr>
+              <tr><td>LIN slave nodes, 19.2 kbit/s</td><td>3 / 3</td><td><span class="pill">PASS</span></td></tr>
+              <tr><td>Output driver load</td><td>2.41 A</td><td><span class="pill">PASS</span></td></tr>
+              <tr><td>Firmware checksum</td><td>0x7A3F</td><td><span class="pill">PASS</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="can-log" aria-hidden="true">
+          <div>0.0124 &nbsp;<span class="id">18DAF110</span> [8] 03 22 F1 87 00 00 00 00</div>
+          <div>0.0189 &nbsp;<span class="id">18DA10F1</span> [8] 10 0B 62 F1 87 42 43 4D</div>
+          <div>0.0233 &nbsp;<span class="id">18DA10F1</span> [8] 21 2D 32 30 34 31 00 00</div>
+        </div>
+        <div class="scr-foot"><span class="big-res">PASS</span><span class="m">Cycle 18.4 s &middot; label printed</span></div>
+      </div>
+    </div>
+
+    <!-- Traceability -->
+    <div class="panel" role="tabpanel" id="p-trace" aria-labelledby="t-trace" hidden>
+      <div class="panel-copy">
+        <h3>Traceability for every serial number</h3>
+        <p>Scan any part and see where it was built, who built it, which tests and inspections it passed, and when it was dispatched. Ready for customer audits and quick root-cause analysis.</p>
+        <ul class="offer">
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>Line traceability application</b><span>SQL and API based records of parts, stations, operators, test results and images.</span></p></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>Interlocks between stations</b><span>A part that skipped or failed a station cannot move to the next one.</span></p></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>Printing &amp; scanning</b><span>Barcode, QR and label printing linked to your part data.</span></p></li>
+        </ul>
+      </div>
+      <div class="screen">
+        <div class="scr-head"><span class="t">Part history</span><span class="m">Sample screen</span></div>
+        <div class="trace-search"><span class="box">KX2611-0457</span><span class="go">Search</span></div>
+        <ol class="tl">
+          <li><span class="tm">08:41:12</span><span class="dot"></span><span class="w"><b>ST10 &middot; Label print</b><span>DMC assigned &middot; OP-12</span></span><span class="pill">OK</span></li>
+          <li><span class="tm">08:42:05</span><span class="dot"></span><span class="w"><b>ST20 &middot; IC flashing</b><span>FW 3.2.1 &middot; checksum 0x7A3F</span></span><span class="pill">OK</span></li>
+          <li><span class="tm">08:43:37</span><span class="dot"></span><span class="w"><b>ST30 &middot; Vision inspection</b><span>6 tools &middot; image saved</span></span><span class="pill">OK</span></li>
+          <li><span class="tm">08:44:20</span><span class="dot"></span><span class="w"><b>ST40 &middot; EOL test</b><span>6 / 6 steps &middot; 18.4 s</span></span><span class="pill">PASS</span></li>
+          <li><span class="tm">08:46:02</span><span class="dot"></span><span class="w"><b>ST50 &middot; Packing</b><span>Box B-1182 &middot; dispatch lot 44</span></span><span class="pill">OK</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Automation -->
+    <div class="panel" role="tabpanel" id="p-auto" aria-labelledby="t-auto" hidden>
+      <div class="panel-copy">
+        <h3>Automation that runs shift after shift</h3>
+        <p>PLC control, operator HMIs and machines built around your cycle time target, with clear screens for operators and maintenance teams.</p>
+        <ul class="offer">
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>PLC &amp; HMI solutions</b><span>Control logic, alarms and operator screens that are easy to use on the shop floor.</span></p></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>Assembly line &amp; indexer machines</b><span>Station automation and indexing machines built for precision and repeatability.</span></p></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>Customized automation</b><span>Special purpose stations designed for your product and process.</span></p></li>
+        </ul>
+      </div>
+      <div class="screen">
+        <div class="scr-head"><span class="t">Line 2 overview &middot; HMI</span><span class="m">Sample screen</span></div>
+        <div class="hmi-line">
+          <div class="st"><b>ST10</b><span>Label</span><span class="pill">RUN</span></div>
+          <div class="st"><b>ST20</b><span>Flash</span><span class="pill">RUN</span></div>
+          <div class="st active"><b>ST30</b><span>Vision</span><span class="pill run">BUSY</span></div>
+          <div class="st"><b>ST40</b><span>EOL test</span><span class="pill">RUN</span></div>
+          <div class="st"><b>ST50</b><span>Pack</span><span class="pill idle">WAIT</span></div>
+        </div>
+        <div class="kpis">
+          <div><span>Cycle time</span><b>21.6 s</b><div class="bar"><i style="width:86%"></i></div></div>
+          <div><span>Output this shift</span><b>1,284</b><div class="bar"><i style="width:72%"></i></div></div>
+          <div><span>First pass yield</span><b>99.6%</b><div class="bar"><i style="width:99.6%"></i></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Software -->
+    <div class="panel" role="tabpanel" id="p-soft" aria-labelledby="t-soft" hidden>
+      <div class="panel-copy">
+        <h3>Software and connectivity that tie it together</h3>
+        <p>Custom applications, databases and integrations that connect your stations to the systems your business already uses.</p>
+        <ul class="offer">
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>Custom software</b><span>Desktop, utility, database and web applications built for your process.</span></p></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>APIs &amp; integration</b><span>Connections to ERP, MES and customer portals for orders, results and reports.</span></p></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>IoT &amp; BLE devices</b><span>Wireless communication for configuring, testing and logging smart devices.</span></p></li>
+        </ul>
+      </div>
+      <div class="screen">
+        <div class="scr-head"><span class="t">System integration</span><span class="m">Example architecture</span></div>
+        <div class="integ">
+          <div class="col">
+            <div class="node"><small>Station</small>Vision ST30</div>
+            <div class="node"><small>Station</small>EOL test ST40</div>
+            <div class="node"><small>Device</small>BLE sensor</div>
+          </div>
+          <div class="wire"></div>
+          <div class="node hub"><b>Karmix server</b><small>SQL database + API</small></div>
+          <div class="wire"></div>
+          <div class="col">
+            <div class="node"><small>Business</small>ERP / MES</div>
+            <div class="node"><small>Reports</small>Quality dashboard</div>
+            <div class="node"><small>Customer</small>Portal upload</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="strip">
+<!-- ================= VISION ================= -->
+<section class="section vision dark" id="vision">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="sec-label">Machine vision solutions</p>
+        <h2>Automated visual inspection for zero-defect production</h2>
+      </div>
+      <p>Manual visual checks get tired by the end of a shift. A Karmix vision system inspects every part the same way, in milliseconds, and saves an image of each result for your records.</p>
+    </div>
+
+    <div class="vgrid">
+      <article class="vcard">
+        <svg class="ill" viewBox="0 0 160 88" aria-hidden="true">
+          <rect x="18" y="22" width="30" height="20" rx="2" fill="#3A424C"/><rect x="65" y="22" width="30" height="20" rx="2" fill="#3A424C"/>
+          <rect x="112" y="22" width="30" height="20" rx="2" fill="none" stroke="#F04B3E" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <rect x="14" y="18" width="38" height="28" fill="none" stroke="#2FC27A" stroke-width="1.2"/><rect x="61" y="18" width="38" height="28" fill="none" stroke="#2FC27A" stroke-width="1.2"/>
+          <text x="127" y="35" fill="#F04B3E" font-family="monospace" font-size="9" text-anchor="middle">?</text>
+          <text x="18" y="70" fill="#8691A0" font-family="monospace" font-size="9">C1 OK  C2 OK  C3 MISSING</text>
+        </svg>
+        <h3>Presence &amp; absence</h3>
+        <p>Confirms every component, clip, screw and label is in place before the part moves on.</p>
+      </article>
+      <article class="vcard">
+        <svg class="ill" viewBox="0 0 160 88" aria-hidden="true">
+          <rect x="22" y="20" width="116" height="34" rx="3" fill="#2A3038"/>
+          <text x="80" y="42" fill="#E6EAEE" font-family="monospace" font-size="14" text-anchor="middle" letter-spacing="1">LOT 2611A</text>
+          <rect x="30" y="27" width="100" height="21" fill="none" stroke="#F57A0A" stroke-width="1.2"/>
+          <text x="22" y="72" fill="#2FC27A" font-family="monospace" font-size="9">OCR "LOT 2611A"  match</text>
+        </svg>
+        <h3>OCR &amp; print verification</h3>
+        <p>Reads printed and laser-marked text, dates and part numbers and checks them against the expected value.</p>
+      </article>
+      <article class="vcard">
+        <svg class="ill" viewBox="0 0 160 88" aria-hidden="true" id="dmcIll">
+          <rect x="58" y="10" width="44" height="44" fill="#E6EAEE"/>
+          <g id="dmcCells" fill="#14171C"></g>
+          <rect x="54" y="6" width="52" height="52" fill="none" stroke="#F57A0A" stroke-width="1.2"/>
+          <text x="80" y="74" fill="#2FC27A" font-family="monospace" font-size="9" text-anchor="middle">KX2611-0457  grade A</text>
+        </svg>
+        <h3>Barcode &amp; Data Matrix</h3>
+        <p>Reads 1D and 2D codes, grades their quality and links each part to its traceability record.</p>
+      </article>
+      <article class="vcard">
+        <svg class="ill" viewBox="0 0 160 88" aria-hidden="true">
+          <path d="M30 24h100v26H96v10H64V50H30z" fill="#3A424C"/>
+          <path d="M30 16v-6M130 16v-6M30 13h100" stroke="#F57A0A" stroke-width="1.2"/>
+          <path d="M33 10l-3 3 3 3M127 10l3 3-3 3" stroke="#F57A0A" stroke-width="1.2" fill="none"/>
+          <path d="M64 66v6M96 66v6M64 69h32" stroke="#F57A0A" stroke-width="1.2"/>
+          <text x="80" y="9" fill="#E6EAEE" font-family="monospace" font-size="8" text-anchor="middle">42.06 mm</text>
+          <text x="80" y="83" fill="#E6EAEE" font-family="monospace" font-size="8" text-anchor="middle">12.01 mm</text>
+        </svg>
+        <h3>Dimension measurement</h3>
+        <p>Non-contact gauging of lengths, diameters, gaps and positions against your drawing tolerances.</p>
+      </article>
+      <article class="vcard">
+        <svg class="ill" viewBox="0 0 160 88" aria-hidden="true">
+          <rect x="24" y="14" width="112" height="50" rx="4" fill="#3A424C"/>
+          <path d="M60 28c8 4 14 10 26 14" stroke="#9AA3AE" stroke-width="1.4" fill="none"/>
+          <circle cx="74" cy="36" r="17" fill="#F04B3E" opacity=".18"/><circle cx="74" cy="36" r="9" fill="#F04B3E" opacity=".25"/>
+          <rect x="52" y="17" width="44" height="38" fill="none" stroke="#F04B3E" stroke-width="1.2"/>
+          <text x="24" y="80" fill="#F04B3E" font-family="monospace" font-size="9">Scratch 3.4 mm  NG</text>
+        </svg>
+        <h3>Surface defect detection</h3>
+        <p>Finds scratches, dents, burrs, cracks and contamination, including with AI-based inspection for varied defects.</p>
+      </article>
+      <article class="vcard">
+        <svg class="ill" viewBox="0 0 160 88" aria-hidden="true">
+          <rect x="20" y="16" width="120" height="40" rx="4" fill="#2A3038"/>
+          <rect x="34" y="16" width="10" height="40" fill="#D33B2C"/><rect x="54" y="16" width="10" height="40" fill="#E2B93B"/><rect x="74" y="16" width="10" height="40" fill="#2E6FD8"/><rect x="94" y="16" width="10" height="40" fill="#E6EAEE"/><rect x="114" y="16" width="10" height="40" fill="#14171C" stroke="#4A525C"/>
+          <text x="20" y="74" fill="#2FC27A" font-family="monospace" font-size="9">Wire sequence 5/5  OK</text>
+        </svg>
+        <h3>Colour &amp; sequence check</h3>
+        <p>Verifies wire colours, harness sequences, LED colours and the right variant of a part.</p>
+      </article>
+      <article class="vcard">
+        <svg class="ill" viewBox="0 0 160 88" aria-hidden="true">
+          <rect x="22" y="22" width="116" height="30" rx="3" fill="#2A3038"/>
+          <g fill="#C9CFD6"><rect x="32" y="30" width="6" height="14"/><rect x="48" y="30" width="6" height="14"/><rect x="64" y="30" width="6" height="14"/><rect x="80" y="30" width="6" height="14"/><rect x="99" y="28" width="6" height="14" transform="rotate(14 102 35)"/><rect x="112" y="30" width="6" height="14"/><rect x="126" y="30" width="6" height="14" opacity="0"/></g>
+          <rect x="94" y="24" width="18" height="24" fill="none" stroke="#F04B3E" stroke-width="1.2"/>
+          <text x="22" y="72" fill="#F04B3E" font-family="monospace" font-size="9">Pin 5 bent 0.31 mm  NG</text>
+        </svg>
+        <h3>Connector &amp; pin inspection</h3>
+        <p>Checks pin count, pin position, bent or pushed-back pins and connector seating.</p>
+      </article>
+      <article class="vcard">
+        <svg class="ill" viewBox="0 0 160 88" aria-hidden="true">
+          <circle cx="44" cy="38" r="20" fill="none" stroke="#3A424C" stroke-width="8"/>
+          <path d="M44 18a20 20 0 0 1 20 20" stroke="#F57A0A" stroke-width="8" fill="none"/>
+          <path d="M96 22h40M96 34h28M96 46h34" stroke="#3A424C" stroke-width="6" stroke-linecap="round"/>
+          <path d="M96 22h32" stroke="#F57A0A" stroke-width="6" stroke-linecap="round"/>
+          <text x="20" y="80" fill="#8691A0" font-family="monospace" font-size="9">X 12.4  Y -3.1  R 7.2&deg;</text>
+        </svg>
+        <h3>Robot guidance &amp; alignment</h3>
+        <p>Locates parts for pick and place, screwing and dispensing, and corrects position and angle on the fly.</p>
+      </article>
+    </div>
+
+    <div class="pipe">
+      <h3>How a Karmix vision station works</h3>
+      <ol>
+        <li><span class="n">01</span><b>Lighting &amp; optics</b><span>The right camera, lens and lighting chosen for your part, finish and field of view.</span></li>
+        <li><span class="n">02</span><b>Image capture</b><span>Triggered by a sensor or the PLC as the part arrives, at line speed.</span></li>
+        <li><span class="n">03</span><b>Inspection software</b><span>Rule-based and AI tools measure, read and compare against your limits.</span></li>
+        <li><span class="n">04</span><b>OK / NG decision</b><span>A clear result for the operator, with the failed region marked on screen.</span></li>
+        <li><span class="n">05</span><b>Reject &amp; record</b><span>The PLC diverts NG parts and the image and result are saved against the serial number.</span></li>
+      </ol>
+    </div>
+
+    <div class="vision-cta">
+      <div>
+        <h3>Not sure if vision can check your part?</h3>
+        <p>Send us photos or sample parts with the defects you want to catch. We will tell you what is possible and how we would do it.</p>
+      </div>
+      <a class="btn btn-primary" href="#contact" data-service="Machine vision inspection">Request a vision feasibility check</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TOOLCHAIN STRIP ================= -->
+<div class="strip" aria-label="Hardware and interfaces we work with">
   <div class="wrap">
     <p>Hardware and interfaces we work with</p>
-    <ul>
-      <li>PEAK-System PCAN</li>
-      <li>CAN &amp; LIN</li>
-      <li>ST-LINK</li>
-      <li>Renesas</li>
-      <li>Intel Cyclone</li>
-      <li>PLC &amp; HMI</li>
-      <li>Barcode / QR</li>
-      <li>BLE</li>
-      <li>SQL Server</li>
-    </ul>
+    <div class="marq">
+      <ul>
+        <li>Industrial cameras</li><li>Smart vision sensors</li><li>PEAK-System PCAN</li><li>CAN &amp; LIN</li><li>ST-LINK</li><li>Renesas</li><li>Intel Cyclone</li><li>PLC &amp; HMI</li><li>Barcode / Data Matrix</li><li>Label printers</li><li>BLE</li><li>SQL Server</li>
+        <li aria-hidden="true">Industrial cameras</li><li aria-hidden="true">Smart vision sensors</li><li aria-hidden="true">PEAK-System PCAN</li><li aria-hidden="true">CAN &amp; LIN</li><li aria-hidden="true">ST-LINK</li><li aria-hidden="true">Renesas</li><li aria-hidden="true">Intel Cyclone</li><li aria-hidden="true">PLC &amp; HMI</li><li aria-hidden="true">Barcode / Data Matrix</li><li aria-hidden="true">Label printers</li><li aria-hidden="true">BLE</li><li aria-hidden="true">SQL Server</li>
+      </ul>
+    </div>
   </div>
 </div>
 
-<!-- SERVICES -->
-<section class="section" id="services">
+<!-- ================= INDUSTRIES ================= -->
+<section class="section ind" id="industries">
   <div class="wrap">
-    <div class="section-head">
-      <h2>What we build for your production line</h2>
-      <p>One partner from requirement to installation. Every solution is made for your product, your station layout and your quality process, so you get a system that fits instead of one you have to work around.</p>
+    <div class="sec-head">
+      <div>
+        <p class="sec-label">Industries</p>
+        <h2>Built for manufacturers who cannot ship a defect</h2>
+      </div>
+      <p>Our systems suit any line where parts must be checked, tested and recorded before dispatch.</p>
     </div>
-
-    <div class="svc-grid">
-      <article class="svc-group">
-        <header>
-          <span class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 12h3l2-6 4 12 2-6h7"/></svg></span>
-          <h3>Testing</h3>
-        </header>
-        <p>Catch faults at the station, before they reach your customer.</p>
-        <ul class="svc-list">
-          <li><b>ECU testing</b><span>CAN and LIN based functional testing with PEAK-System hardware, diagnostics and DTC checks.</span></li>
-          <li><b>FCT &amp; EOL test stations</b><span>Functional and end-of-line testers for PCBs and finished assemblies, with limits and reports.</span></li>
-          <li><b>IC flashing &amp; programming</b><span>Production flashing with ST-LINK, Renesas and Cyclone programmers, with checksum verification.</span></li>
-        </ul>
-      </article>
-
-      <article class="svc-group">
-        <header>
-          <span class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 5v14M7 5v14M10 5v14M14 5v14M17 5v14M20 5v14" /></svg></span>
-          <h3>Traceability &amp; software</h3>
-        </header>
-        <p>Know the history of every serial number, on demand.</p>
-        <ul class="svc-list">
-          <li><b>Traceability application</b><span>SQL and API based tracking of parts, test results, operators and stations across the line.</span></li>
-          <li><b>Printing &amp; scanning</b><span>Barcode, QR and label printing applications linked to your part data.</span></li>
-          <li><b>Custom software &amp; integration</b><span>Desktop, database and web tools, plus API integration with your ERP, MES or customer portals.</span></li>
-        </ul>
-      </article>
-
-      <article class="svc-group">
-        <header>
-          <span class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span>
-          <h3>Automation &amp; machines</h3>
-        </header>
-        <p>Stations and machines that run reliably, shift after shift.</p>
-        <ul class="svc-list">
-          <li><b>PLC &amp; HMI solutions</b><span>Control logic and operator screens that are clear to use on the shop floor.</span></li>
-          <li><b>Assembly line &amp; indexer machines</b><span>Station automation and indexing machines built for precision and repeatability.</span></li>
-          <li><b>IoT &amp; BLE devices</b><span>Wireless connectivity and device communication for smart products and machines.</span></li>
-        </ul>
-      </article>
+    <div class="ind-grid">
+      <article class="ind-card"><span class="ind-ic"><svg viewBox="0 0 24 24"><path d="M5 16l1.5-5h11L19 16"/><rect x="3" y="16" width="18" height="4" rx="1"/><circle cx="7.5" cy="20" r="1.5"/><circle cx="16.5" cy="20" r="1.5"/></svg></span><div><h3>Automotive electronics</h3><p>ECUs, body control modules, sensors and wiring harnesses.</p></div></article>
+      <article class="ind-card"><span class="ind-ic"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="14" height="10" rx="1.5"/><path d="M18 10h2v4h-2M9 9l-2 3h4l-2 3"/></svg></span><div><h3>EV &amp; battery</h3><p>Battery packs, BMS boards, chargers and power electronics.</p></div></article>
+      <article class="ind-card"><span class="ind-ic"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="1"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></span><div><h3>Electronics manufacturing</h3><p>PCB assembly, SMT lines and box build for EMS companies.</p></div></article>
+      <article class="ind-card"><span class="ind-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></span><div><h3>Auto components</h3><p>Machined, moulded and assembled parts that need gauging and defect checks.</p></div></article>
+      <article class="ind-card"><span class="ind-ic"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><div><h3>Consumer &amp; smart devices</h3><p>Appliances, IoT and BLE products tested before packing.</p></div></article>
+      <article class="ind-card"><span class="ind-ic"><svg viewBox="0 0 24 24"><path d="M3 21V10l5 3V10l5 3V7l8 5v9z"/><path d="M7 17h2M12 17h2M17 17h2"/></svg></span><div><h3>Industrial equipment</h3><p>Controllers, panels and assemblies for industrial customers.</p></div></article>
     </div>
   </div>
 </section>
 
-<!-- WORK -->
-<section class="section work" id="work">
+<!-- ================= PROJECTS ================= -->
+<section class="section" id="work">
   <div class="wrap">
-    <div class="section-head">
-      <h2>Projects we have delivered</h2>
-      <p>A selection of systems running on customer lines. Ask us for a demo or a detailed case discussion for your product type.</p>
+    <div class="sec-head">
+      <div>
+        <p class="sec-label">Projects</p>
+        <h2>Systems we have delivered</h2>
+      </div>
+      <p>A selection of systems running on customer lines. Ask us for a demo or a detailed discussion for your product type.</p>
     </div>
-
     <div class="jobs">
       <article class="job">
         <div class="job-top"><span class="job-area">Testing</span><span class="job-code">KX-P01</span></div>
@@ -481,47 +873,52 @@ a.channel:hover{border-color:var(--orange);background:#1E2227}
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="section process" id="process">
+<!-- ================= PROCESS ================= -->
+<section class="section process" id="process" style="padding-top:0">
   <div class="wrap">
-    <div class="section-head">
-      <h2>How a project runs with us</h2>
+    <div class="sec-head">
+      <div>
+        <p class="sec-label">How we work</p>
+        <h2>From requirement to running line</h2>
+      </div>
       <p>A clear sequence with your sign-off at each stage, so there are no surprises at installation.</p>
     </div>
     <ol>
-      <li><div class="dot"><b>1</b></div><h3>Requirement study</h3><p>We visit your line or review your drawings, test specs and quality needs.</p></li>
-      <li><div class="dot"><b>2</b></div><h3>Design &amp; quotation</h3><p>You get a defined scope, test plan, timeline and price before work starts.</p></li>
-      <li><div class="dot"><b>3</b></div><h3>Build &amp; integrate</h3><p>Software, hardware interfaces and fixtures are built and tested in-house.</p></li>
-      <li><div class="dot"><b>4</b></div><h3>Trial at your plant</h3><p>We install, run trials with real parts and fine-tune limits with your team.</p></li>
+      <li><div class="dot"><b>1</b></div><h3>Requirement study</h3><p>We visit your line or review drawings, test specs, defect samples and quality needs.</p></li>
+      <li><div class="dot"><b>2</b></div><h3>Design &amp; quotation</h3><p>You get a defined scope, test or inspection plan, timeline and price before work starts.</p></li>
+      <li><div class="dot"><b>3</b></div><h3>Build &amp; integrate</h3><p>Software, cameras, hardware interfaces and fixtures are built and proven in-house.</p></li>
+      <li><div class="dot"><b>4</b></div><h3>Trial at your plant</h3><p>We install, run trials with real parts and tune limits together with your team.</p></li>
       <li><div class="dot"><b>5</b></div><h3>Handover &amp; support</h3><p>Operator training, documentation and support after go-live.</p></li>
     </ol>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 <section class="section about" id="about">
   <div class="wrap">
     <div class="about-logo"><img src="assets/karmix-logo.png" alt="Karmix Technology logo. Karma inspires excellence." width="640" height="399"></div>
     <div class="about-copy">
-      <h2>Your partner for automation and software</h2>
-      <p>Karmix Technology is a growing automation and software company based in Pune, Maharashtra. We work closely with manufacturers to understand how their line runs and turn that into practical, reliable and cost-effective solutions.</p>
+      <p class="sec-label">About Karmix</p>
+      <h2>Engineering partner for automation and quality</h2>
+      <p>Karmix Technology is a growing automation and software company based in Pune, Maharashtra. We work closely with manufacturers to understand how their line runs, and turn that into practical, reliable and cost-effective systems.</p>
       <p>Our name comes from our belief: karma inspires excellence. Good work, done honestly, is what keeps customers coming back.</p>
       <div class="values">
-        <div><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>Quality first</b><span>Every system is tested in-house before it reaches your plant.</span></p></div>
+        <div><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><p><b>Quality first</b><span>Every system is proven in-house before it reaches your plant.</span></p></div>
         <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><p><b>On-time delivery</b><span>Clear timelines agreed up front, and we keep them.</span></p></div>
-        <div><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><p><b>Direct support</b><span>You talk to the engineers who built your system.</span></p></div>
+        <div><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><p><b>Direct engineer support</b><span>You talk to the engineers who built your system.</span></p></div>
         <div><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M14 7h7v7"/></svg><p><b>Continuous improvement</b><span>We keep improving cycle time, usability and data after go-live.</span></p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="section contact" id="contact">
+<!-- ================= CONTACT ================= -->
+<section class="section contact dark" id="contact">
   <div class="wrap">
     <div>
-      <h2>Tell us about your requirement</h2>
-      <p class="contact-intro">Share your product, what needs to be tested or automated, and your timeline. We will get back to you as soon as possible.</p>
+      <p class="sec-label">Contact</p>
+      <h2>Let&rsquo;s talk about your line</h2>
+      <p class="contact-intro">Tell us about your product, what needs to be inspected, tested or automated, and your timeline. We will get back to you as soon as possible.</p>
       <div class="channels">
         <a class="channel" href="tel:+918668657463">
           <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
@@ -529,7 +926,7 @@ a.channel:hover{border-color:var(--orange);background:#1E2227}
         </a>
         <a class="channel" href="https://wa.me/918668657463" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>
-          <span><small>WhatsApp</small><b>Chat with us</b></span>
+          <span><small>WhatsApp</small><b>+91 86686 57463</b></span>
         </a>
         <a class="channel" href="mailto:karmixtechnology@gmail.com">
           <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
@@ -553,18 +950,19 @@ a.channel:hover{border-color:var(--orange);background:#1E2227}
         <div class="field full"><label for="fService">What do you need?</label>
           <select id="fService" name="service" required>
             <option value="">Choose a service</option>
+            <option>Machine vision inspection</option>
             <option>ECU testing (CAN / LIN)</option>
             <option>FCT &amp; EOL test station</option>
             <option>IC flashing &amp; programming</option>
             <option>Traceability application</option>
             <option>Printing &amp; scanning</option>
-            <option>Custom software &amp; integration</option>
             <option>PLC &amp; HMI solution</option>
             <option>Assembly line &amp; indexer</option>
+            <option>Custom software &amp; integration</option>
             <option>IoT &amp; BLE devices</option>
             <option>Something else</option>
           </select><span class="err"></span></div>
-        <div class="field full"><label for="fMsg">Project details</label><textarea id="fMsg" name="message" required placeholder="Product, what needs testing or automation, expected volume, timeline"></textarea><span class="err"></span></div>
+        <div class="field full"><label for="fMsg">Project details</label><textarea id="fMsg" name="message" required placeholder="Product, what needs inspection, testing or automation, expected volume, timeline"></textarea><span class="err"></span></div>
       </div>
       <div class="form-actions">
         <button class="btn btn-primary" type="submit">Send enquiry</button>
@@ -586,11 +984,15 @@ a.channel:hover{border-color:var(--orange);background:#1E2227}
           <span class="brand-name"><b>KARMI<span>X</span></b><small>TECHNOLOGY</small></span>
         </div>
         <p class="foot-tag">Karma inspires excellence</p>
-        <p style="margin-top:12px;max-width:30em">Test systems, traceability software and automation for manufacturers, from Pune.</p>
+        <p style="margin-top:12px;max-width:30em">Machine vision, test systems, traceability software and automation for manufacturers, from Pune.</p>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <ul><li><a href="#vision">Machine vision</a></li><li><a href="#solutions" data-tab="testing">ECU &amp; EOL testing</a></li><li><a href="#solutions" data-tab="trace">Traceability</a></li><li><a href="#solutions" data-tab="auto">PLC &amp; automation</a></li><li><a href="#solutions" data-tab="soft">Software &amp; IoT</a></li></ul>
       </div>
       <div>
         <h4>Company</h4>
-        <ul><li><a href="#services">Services</a></li><li><a href="#work">Projects</a></li><li><a href="#process">How we work</a></li><li><a href="#about">About</a></li></ul>
+        <ul><li><a href="#industries">Industries</a></li><li><a href="#work">Projects</a></li><li><a href="#process">How we work</a></li><li><a href="#about">About</a></li></ul>
       </div>
       <div>
         <h4>Contact</h4>
@@ -610,63 +1012,210 @@ a.channel:hover{border-color:var(--orange);background:#1E2227}
 
 <script>
 (function(){
-  // Mobile menu
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Mobile menu ---------- */
   var btn=document.getElementById('menuBtn'), nav=document.getElementById('nav');
   function setMenu(open){nav.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);btn.setAttribute('aria-label',open?'Close menu':'Open menu');}
   btn.addEventListener('click',function(){setMenu(!nav.classList.contains('open'));});
   nav.addEventListener('click',function(e){if(e.target.tagName==='A')setMenu(false);});
-
   document.getElementById('year').textContent=new Date().getFullYear();
 
-  // Test station demo: re-runs the test sequence on loop. The finished result is shown at rest.
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var steps=[].slice.call(document.querySelectorAll('#stSteps li'));
-  var result=document.getElementById('stResult'), timeEl=document.getElementById('stTime');
-  var serialEl=document.getElementById('stSerial'), canEl=document.getElementById('stCan'), countEl=document.getElementById('stCount');
-  var stepTimes=[1.6,2.1,3.4,2.2,4.1,2.6,2.4];
-  var frames=[
-    ['18DAF110','02 10 03 00 00 00 00 00'],['18DA10F1','06 50 03 00 32 01 F4 00'],
-    ['18DAF110','03 22 F1 87 00 00 00 00'],['18DA10F1','10 0B 62 F1 87 42 43 4D'],
-    ['3C','[LIN] 01 00 FF FF FF FF FF'],['3D','[LIN] 21 04 A0 00 12 7F 00 00'],
-    ['0C1','[8] 00 0F 41 00 00 00 00 00'],['18DAF110','03 22 F1 95 00 00 00 00'],
-    ['18DA10F1','07 62 F1 95 7A 3F 00 00'],['18DAF110','02 3E 00 00 00 00 00 00']
-  ];
-  var serial=457, tested=1284, t0=0;
-  function hex(n){return n.toString(16).toUpperCase();}
-  function pushFrame(){
-    var f=frames[Math.floor(Math.random()*frames.length)];
-    t0+=0.003+Math.random()*0.009;
-    var d=document.createElement('div');
-    d.innerHTML=t0.toFixed(4)+' &nbsp;<span class="id">'+f[0]+'</span> '+(f[1].charAt(0)==='['?f[1]:'[8] '+f[1]);
-    canEl.appendChild(d);
-    while(canEl.children.length>4)canEl.removeChild(canEl.firstElementChild);
+  /* ---------- Solution tabs ---------- */
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function selectTab(id,focus){
+    tabs.forEach(function(t){
+      var on=t.id==='t-'+id;
+      t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden=!on;
+      if(on&&focus)t.focus();
+    });
   }
-  function run(){
-    serial++; t0=0;
-    serialEl.textContent='KX2611-0'+serial;
-    steps.forEach(function(li){li.className='wait';li.querySelector('.res').textContent='—';});
-    result.className='st-result busy';result.textContent='TESTING';
-    var i=0, elapsed=0;
-    function next(){
-      if(i>0){var prev=steps[i-1];prev.className='';prev.querySelector('.res').textContent='PASS';}
-      if(i===steps.length){
-        result.className='st-result';result.textContent='PASS';
-        tested++; countEl.textContent='Today: '+tested.toLocaleString('en-IN')+' tested · 0.4% reject';
-        setTimeout(run,5200);return;
-      }
-      var li=steps[i];li.className='run';li.querySelector('.res').textContent='RUN';
-      var dur=stepTimes[i], start=elapsed, ticks=0;
-      var iv=setInterval(function(){
-        ticks++; pushFrame();
-        timeEl.textContent=(start+dur*Math.min(ticks/4,1)).toFixed(1)+' s';
-      },110);
-      setTimeout(function(){clearInterval(iv);elapsed+=dur;timeEl.textContent=elapsed.toFixed(1)+' s';i++;next();},460);
-    }
-    next();
-  }
-  if(!reduce){setTimeout(run,2600);}
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){selectTab(t.id.slice(2));});
+    t.addEventListener('keydown',function(e){
+      var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0; if(!d)return;
+      e.preventDefault(); selectTab(tabs[(i+d+tabs.length)%tabs.length].id.slice(2),true);
+    });
+  });
+  document.querySelectorAll('[data-tab]').forEach(function(a){a.addEventListener('click',function(){selectTab(a.getAttribute('data-tab'));});});
+  document.querySelectorAll('[data-service]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('fService').value=a.getAttribute('data-service');});});
 
-  // Enquiry form: validates, then opens the visitor's email app with the message prepared.
+  /* ---------- Data Matrix pattern for the illustration ---------- */
+  (function(){
+    var g=document.getElementById('dmcCells'), n=12, s=44/n, seed=7, html='';
+    function rnd(){seed=(seed*16807)%2147483647;return seed/2147483647;}
+    for(var y=0;y<n;y++)for(var x=0;x<n;x++){
+      var on = x===0||y===n-1 ? 1 : (y===0? x%2===0 : x===n-1 ? y%2===1 : rnd()>.5);
+      if(on)html+='<rect x="'+(58+x*s).toFixed(2)+'" y="'+(10+y*s).toFixed(2)+'" width="'+(s+.05).toFixed(2)+'" height="'+(s+.05).toFixed(2)+'"/>';
+    }
+    g.innerHTML=html;
+  })();
+
+  /* ---------- Live vision inspection canvas ---------- */
+  var cv=document.getElementById('vis'), ctx=cv.getContext('2d');
+  var W=640,H=400, scale=1, dpr=1, cw=W, ch=H, board=document.createElement('canvas');
+  var resEl=document.getElementById('vRes'), serEl=document.getElementById('vSerial'), timeEl=document.getElementById('vTime'), cntEl=document.getElementById('vCount');
+
+  // Data Matrix modules for the label on the board
+  var dmc=[];(function(){var s=11;function r(){s=(s*16807)%2147483647;return s/2147483647;}var n=14;
+    for(var y=0;y<n;y++){dmc[y]=[];for(var x=0;x<n;x++){dmc[y][x]= x===0||y===n-1?1:(y===0?(x%2===0?1:0):(x===n-1?(y%2===1?1:0):(r()>.5?1:0)));}}})();
+
+  var rois=[
+    {x:84,y:74,w:132,h:132,label:'OCR  KX-MCU 2041',s:'OCR OK'},
+    {x:254,y:86,w:82,h:48,label:'U2 orientation OK',s:'U2 OK'},
+    {x:366,y:62,w:112,h:46,label:'C1 C2 polarity OK',s:'C1 C2 OK',below:1},
+    {x:254,y:158,w:140,h:40,label:'R1–R6 present 6/6',s:'R 6/6'},
+    {x:408,y:154,w:44,h:36,label:'D1 offset 0.08 mm',s:'D1 OK',below:1},
+    {x:82,y:244,w:186,h:62,label:'J1 pins 8/8 OK',s:'J1 OK',ng:'J1 pin 6 bent 0.31 mm',ngs:'J1 NG'},
+    {x:472,y:242,w:86,h:86,label:'DMC  KX2611-0457',s:'DMC OK',below:1}
+  ];
+
+  function drawBoard(g,ngPin){
+    g.fillStyle='#0A0C0F';g.fillRect(0,0,W,H);
+    // board
+    g.fillStyle='#23292E';roundRect(g,30,30,580,340,10);g.fill();
+    g.strokeStyle='#30373D';g.lineWidth=2;roundRect(g,30,30,580,340,10);g.stroke();
+    // traces
+    g.strokeStyle='#2E363C';g.lineWidth=3;g.lineCap='round';
+    [[[216,110],[250,110]],[[216,150],[240,150],[240,178],[254,178]],[[336,110],[360,110],[360,85],[372,85]],[[394,178],[420,178]],[[150,206],[150,244]],[[268,275],[320,275],[320,300],[470,300]],[[440,85],[520,85],[520,240]],[[300,134],[300,158]],[[60,120],[84,120]],[[60,200],[60,330],[200,330]]]
+      .forEach(function(p){g.beginPath();g.moveTo(p[0][0],p[0][1]);for(var i=1;i<p.length;i++)g.lineTo(p[i][0],p[i][1]);g.stroke();});
+    // vias
+    g.fillStyle='#3B444B';[[320,300],[520,240],[240,178],[60,330],[360,85],[420,178]].forEach(function(v){g.beginPath();g.arc(v[0],v[1],4,0,7);g.fill();});
+    // mounting holes
+    [[52,52],[588,52],[52,348],[588,348]].forEach(function(h){g.fillStyle='#3A4248';g.beginPath();g.arc(h[0],h[1],11,0,7);g.fill();g.fillStyle='#0A0C0F';g.beginPath();g.arc(h[0],h[1],6,0,7);g.fill();});
+    // U1 QFP
+    g.fillStyle='#9AA3AB';
+    for(var i=0;i<12;i++){var o=100+6+i*8;g.fillRect(o,90,4,-8);g.fillRect(o,200,4,8);g.fillRect(92,o,-8,4);g.fillRect(200,o,8,4);}
+    g.fillStyle='#15191C';g.fillRect(100,90,100,110);
+        g.fillStyle='#2A3034';g.beginPath();g.arc(112,102,4,0,7);g.fill();
+    g.fillStyle='#C9CFD4';g.font='600 13px "IBM Plex Mono",monospace';g.textAlign='center';g.fillText('KX-MCU',150,142);g.fillText('2041',150,160);
+    // U2 SOIC
+    g.fillStyle='#9AA3AB';for(i=0;i<6;i++){g.fillRect(270+i*9,90,4,6);g.fillRect(270+i*9,124,4,6);}
+    g.fillStyle='#15191C';g.fillRect(264,96,62,28);g.fillStyle='#2A3034';g.beginPath();g.arc(272,110,3,0,7);g.fill();
+    // C1 C2
+    [[392,85],[452,85]].forEach(function(c){g.fillStyle='#B8C0C7';g.beginPath();g.arc(c[0],c[1],18,0,7);g.fill();g.fillStyle='#4A5258';g.beginPath();g.moveTo(c[0],c[1]);g.arc(c[0],c[1],18,Math.PI*.5,Math.PI*1.5);g.fill();g.fillStyle='#6F7880';g.beginPath();g.arc(c[0],c[1],7,0,7);g.fill();});
+    // R1-R6
+    for(i=0;i<6;i++){var rx=262+i*21;g.fillStyle='#C2C8CD';g.fillRect(rx,166,14,24);g.fillStyle='#2C3236';g.fillRect(rx+2,171,10,14);}
+    // D1 LED
+    g.fillStyle='#C2C8CD';g.fillRect(414,163,32,18);g.fillStyle='#E9EDF0';g.fillRect(422,166,16,12);
+    // J1 connector
+    g.fillStyle='#3A4147';roundRect(g,90,252,170,46,4);g.fill();g.fillStyle='#14181B';roundRect(g,96,258,158,34,3);g.fill();
+    for(i=0;i<8;i++){var px=110+i*19.5, py=275; if(ngPin&&i===5){px+=4;py-=4;}
+      g.fillStyle='#D3D8DC';g.beginPath();g.arc(px,py,5.5,0,7);g.fill();}
+    // DMC label
+    g.fillStyle='#E4E8EB';g.fillRect(478,248,74,74);
+    var n=14,s=62/n;g.fillStyle='#14171C';
+    for(var y=0;y<n;y++)for(var x=0;x<n;x++)if(dmc[y][x])g.fillRect(484+x*s,254+y*s,s+.3,s+.3);
+    // silkscreen
+    g.fillStyle='#7F8990';g.font='500 11px "IBM Plex Mono",monospace';g.textAlign='left';
+    g.fillText('U1',100,220);g.fillText('U2',264,148);g.fillText('C1',380,120);g.fillText('C2',440,120);g.fillText('J1',90,318);g.fillText('D1',414,198);
+    g.fillText('KARMIX BCM-2041 REV C',300,345);
+    // vignette
+    var vg=g.createRadialGradient(W/2,H/2,140,W/2,H/2,420);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(0,0,0,.45)');g.fillStyle=vg;g.fillRect(0,0,W,H);
+  }
+  function roundRect(g,x,y,w,h,r){g.beginPath();g.moveTo(x+r,y);g.arcTo(x+w,y,x+w,y+h,r);g.arcTo(x+w,y+h,x,y+h,r);g.arcTo(x,y+h,x,y,r);g.arcTo(x,y,x+w,y,r);g.closePath();}
+
+  var boards={};
+  function buildBoards(){
+    [false,true].forEach(function(ng){
+      var c=document.createElement('canvas');c.width=Math.round(cw*dpr);c.height=Math.round(ch*dpr);
+      var g=c.getContext('2d');g.setTransform(scale*dpr,0,0,scale*dpr,0,0);drawBoard(g,ng);boards[ng?'ng':'ok']=c;
+    });
+  }
+  function resize(){
+    var r=cv.getBoundingClientRect(); if(!r.width)return;
+    dpr=Math.min(2,window.devicePixelRatio||1); cw=r.width; ch=r.width*H/W; scale=cw/W;
+    cv.width=Math.round(cw*dpr); cv.height=Math.round(ch*dpr); buildBoards(); draw(performance.now());
+  }
+
+  var cycle=0, ng=false, start=0, phase='scan', SCAN=2600, HOLD=2600, okCount=2418, ngCount=7, serial=457;
+  function newCycle(now){
+    cycle++; serial++; ng=(cycle%5===3); start=now; phase='scan';
+    serEl.textContent='KX2611-0'+serial; resEl.textContent='SCAN'; resEl.className='busy';
+    timeEl.textContent='—';
+  }
+  function finish(){
+    phase='hold';
+    resEl.textContent=ng?'NG':'OK'; resEl.className=ng?'ng':'';
+    timeEl.textContent=(37+Math.floor(Math.random()*9))+' ms';
+    if(ng)ngCount++;else okCount++;
+    cntEl.textContent=okCount.toLocaleString('en-IN')+' / '+ngCount;
+  }
+
+  function corner(x,y,w,h,len){
+    ctx.beginPath();
+    ctx.moveTo(x,y+len);ctx.lineTo(x,y);ctx.lineTo(x+len,y);
+    ctx.moveTo(x+w-len,y);ctx.lineTo(x+w,y);ctx.lineTo(x+w,y+len);
+    ctx.moveTo(x+w,y+h-len);ctx.lineTo(x+w,y+h);ctx.lineTo(x+w-len,y+h);
+    ctx.moveTo(x+len,y+h);ctx.lineTo(x,y+h);ctx.lineTo(x,y+h-len);
+    ctx.stroke();
+  }
+
+  function draw(now,staticDone){
+    var t=staticDone?1:Math.min(1,(now-start)/SCAN);
+    var scanX=30+t*580;
+    var isNg=ng&&!staticDone;
+    ctx.setTransform(1,0,0,1,0,0);
+    ctx.drawImage(boards[isNg?'ng':'ok']||cv,0,0);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    var narrow=cw<470;
+    ctx.font='500 '+(narrow?10:11.5)+'px "IBM Plex Mono",monospace';
+    ctx.textBaseline='middle';ctx.textAlign='left';
+    rois.forEach(function(r){
+      var cx=r.x+r.w/2; if(scanX<cx && phase==='scan' && !staticDone) return;
+      var bad=isNg&&r.ng;
+      var age=staticDone||phase!=='scan'?1:Math.min(1,(scanX-cx)/60);
+      var col=bad?'#F04B3E':'#2FC27A';
+      var x=r.x*scale,y=r.y*scale,w=r.w*scale,h=r.h*scale;
+      ctx.globalAlpha=age;
+      ctx.strokeStyle=col;ctx.lineWidth=1.5;
+      if(bad){ctx.fillStyle='rgba(240,75,62,.14)';ctx.fillRect(x,y,w,h);ctx.setLineDash([]);ctx.strokeRect(x,y,w,h);}
+      else{ctx.setLineDash([3,3]);ctx.strokeRect(x,y,w,h);ctx.setLineDash([]);ctx.lineWidth=2;corner(x,y,w,h,Math.min(10,w/4));}
+      var text=narrow?(bad?r.ngs:r.s):(bad?r.ng:r.label);
+      var tw=ctx.measureText(text).width+12, th=narrow?17:20;
+      var lx=Math.min(Math.max(2,x),cw-tw-2), ly=r.below?y+h+3:y-th-3; if(ly<2)ly=y+h+3;
+      ctx.fillStyle=bad?'#F04B3E':'rgba(10,12,15,.86)';ctx.fillRect(lx,ly,tw,th);
+      ctx.fillStyle=bad?'#fff':col;ctx.fillText(text,lx+6,ly+th/2+.5);
+      ctx.globalAlpha=1;
+    });
+    if(phase==='scan'&&!staticDone){
+      var sx=scanX*scale;
+      var gr=ctx.createLinearGradient(sx-60,0,sx,0);gr.addColorStop(0,'rgba(245,122,10,0)');gr.addColorStop(1,'rgba(245,122,10,.22)');
+      ctx.fillStyle=gr;ctx.fillRect(sx-60,30*scale,60,340*scale);
+      ctx.fillStyle='#F57A0A';ctx.fillRect(sx-1,30*scale,2,340*scale);
+    }
+    // crosshair frame
+    ctx.strokeStyle='rgba(245,122,10,.55)';ctx.lineWidth=1;
+    corner(8,8,cw-16,ch-16,18);
+    if(isNg&&phase==='hold'){
+      ctx.fillStyle='rgba(240,75,62,.9)';var m='REJECT → PLC';ctx.font='600 '+(narrow?11:13)+'px "IBM Plex Mono",monospace';
+      var mw=ctx.measureText(m).width+16;ctx.fillRect(cw-mw-14,ch-36,mw,24);ctx.fillStyle='#fff';ctx.fillText(m,cw-mw-6,ch-23.5);
+    }
+  }
+
+  var visible=true, raf=0;
+  function loop(now){
+    if(!start)newCycle(now);
+    if(phase==='scan'&&now-start>=SCAN)finish();
+    if(phase==='hold'&&now-start>=SCAN+HOLD)newCycle(now);
+    draw(now);
+    raf=visible?requestAnimationFrame(loop):0;
+  }
+  function boot(){
+    resize();
+    if(reduce){draw(0,true);return;}
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){visible=es[0].isIntersecting; if(visible&&!raf)raf=requestAnimationFrame(loop);}).observe(cv);
+    }
+    raf=requestAnimationFrame(loop);
+  }
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(resize,120);});
+  // Draw the finished OK state immediately so the window is never blank, then start the cycle.
+  resize(); draw(0,true);
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){setTimeout(boot,900);});}else{setTimeout(boot,900);}
+
+  /* ---------- Enquiry form ---------- */
   var form=document.getElementById('enquiryForm'), status=document.getElementById('formStatus');
   function setErr(id,msg){var f=document.getElementById(id).closest('.field');f.classList.toggle('invalid',!!msg);var e=f.querySelector('.err');if(e)e.textContent=msg||'';}
   form.addEventListener('submit',function(e){
@@ -680,10 +1229,9 @@ a.channel:hover{border-color:var(--orange);background:#1E2227}
     setErr('fMsg',v('fMsg')?'':'Add a few details about your project.'); if(!v('fMsg'))ok=false;
     if(!ok){var first=form.querySelector('.invalid input,.invalid select,.invalid textarea');if(first)first.focus();return;}
     var body='Name: '+v('fName')+'\nCompany: '+(v('fCompany')||'-')+'\nEmail: '+em+'\nPhone: '+(v('fPhone')||'-')+'\nService: '+v('fService')+'\n\n'+v('fMsg');
-    var url='mailto:karmixtechnology@gmail.com?subject='+encodeURIComponent('Enquiry: '+v('fService')+' - '+v('fName'))+'&body='+encodeURIComponent(body);
-    window.location.href=url;
+    window.location.href='mailto:karmixtechnology@gmail.com?subject='+encodeURIComponent('Enquiry: '+v('fService')+' - '+v('fName'))+'&body='+encodeURIComponent(body);
     status.hidden=false;
-    status.textContent='Your email app should open with the enquiry ready to send. If it does not, email us at karmixtechnology@gmail.com or call +91 86686 57463.';
+    status.textContent='Your email app should open with the enquiry ready to send. If it does not, email karmixtechnology@gmail.com or call +91 86686 57463.';
   });
 })();
 </script>

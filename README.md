@@ -1,6 +1,6 @@
 # Karmix Technology website
 
-Single-page static site for GitHub Pages (karmixtechnology.in).
+Single-page static site (v2, with machine vision section) for GitHub Pages (karmixtechnology.in).
 
 ## Files
 - `index.html` – the whole site (HTML, CSS and JS in one file)
